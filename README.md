@@ -15,9 +15,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated Submission-Based (SB) extra credit. The
 late penalty does not start applying until after the final date listed.
 
-* **MON 2023-02-27 (Feb 27) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **TUE 2023-02-28 (Feb 28) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **WED 2023-03-01 (Mar 01) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2023-03-01 (Mar 01) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **THU 2023-03-02 (Mar 02) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **FRI 2023-03-03 (Mar 03) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
 
@@ -451,7 +451,7 @@ post to your instructor via the course Piazza as soon as possible. However,
 creating a post about something like this the day or night the project is due
 is probably not the best idea.
 
-# Appendix - Suggested Checklist
+# Appendix - Project Checklist
 
 To help you with planning out this project, here are some suggested steps you
 can take that your instructors believe will help you complete the project more
@@ -460,33 +460,40 @@ read the entire project description, including the [FAQ](#appendix---faq).
 These steps are suggesions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
-1. Preparation (Suggested Deadline: Monday, Oct 3rd):
+1. Preparation (Suggested Deadline: Monday, Feb 20th):
 
    - [ ] Read through the entire project description, including the appendices,
-         **and write down questions as you go**.
-   - [ ] Read through the entire [API Documentation for `StringList`](https://webwork.cs.uga.edu/~mepcott/cs1302-phased-list/1/cs1302/adt/StringList.html),
-         **and write down questions as you go**.
-	 * Be sure to read both the summary comment for each method and its detailed
-	   description (which can be reached by clicking on it).
+         and **write down questions as you go**.
+   - [ ] Read through the entire API Documentation for the classes in the `cs1302.adt` package linked below:
+   - [ ] [`cs1302.adt.Node`](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/Node.html)
+   - [ ] [`cs1302.adt.StringList`](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html)
+	 * Be sure to read everything up to the "Method Details" section. That section is important but will make more
+	   sense later - you will want to reference it when you are ready to start writing code.
+	 * Carefully trace through any code examples that are given. These will help you understand how your
+	   class will be used. In the examples, the object created is of type `OracleStringList`. When you are
+	   testing your code, you will replace `OracleStringList` with `ArrayStringList` and `LinkedStringList`.
    - [ ] Read both of them again! This time, you may be able to answer some of your own questions.
 
-1. Before you write any code (Suggested Deadline: Tuesday, Oct 4th):
+1. Before you write any code (Suggested Deadline: Tuesday, Feb 21st):
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
 	 would occur if the driver program executed the line `sl.append("end")` on a preexisting object of
-	 a class that implements `StringList`?
+	 a class that implements `StringList`? Use the code examples in the documentation to get you started.
    - [ ] For each method in the interface, try to write down what you
          think the basic steps need to be in order to produce the desired outcome.
 	 * Try to keep it high level. If the steps that you write down sound like they
 	   can be accomplished with another method, then replace those steps with
 	   a note to refer to that method. If that other method does not yet exist,
 	   then you might introduce that as a _private_ or _protected_ helper method.
+	   Using existing methods can greatly cut down the amount of code you need
+	   to write and will minimize the number of bugs in your code.
 	 * Here is an example: If there are multiple methods that have a step that
 	   gets an element from a specific index in the list, then you might have
 	   that method call the list's [`get`](https://webwork.cs.uga.edu/~mepcott/cs1302-phased-list/1/cs1302/adt/StringList.html#get(int))(may require VPN
-	   connection to view)
-	   method instead of directly accessing the underlying data structure (array or linked list).
+	   connection to view) 
+	   method instead of directly accessing the underlying data structure (array or linked list) which
+	   might require writing the same loop multiple times.
 	 * Consider drawing out diagrams similar to the diagrams to the provided
 	 [Examples](https://github.com/cs1302uga/cs1302-tutorials/blob/master/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
    - [ ] Based on the previous suggestion, draw out what the method dependencies
@@ -496,29 +503,43 @@ of steps that you may need to take to complete the project.
 	   start with in the next phase of your development. We'll call these the
 	   independent methods.
 
-1. Prepare to implement the methods (Suggested Deadline: Wednesday, Oct 5th):
+1. Prepare to implement the methods (Suggested Deadline: Wednesday, Feb 22nd):
 
    - [ ] Create the `.java` files for each implementing class and the common parent (`BaseStringList`) and make sure all classes
          are in the correct package and all entities have the proper visibility. For each file:
 	 * Write the class signature (top-level declaration) and all of the method signatures (member-level declarations). Remember, in the child
 	   classes (`ArrayStringList` and `LinkedStringList`), you don't need to include method signatures for inherited methods that aren't overridden
 	   in the child classes.
-	 * In the body of each method, write the `throw` statement that is suggested
+	 * In the body of each method, throw an `UnsupportedOperationException` as suggested
 	   in [the FAQ](#faq-uoe). **Do not attempt to actually implement the method yet.**
 	 * Run `checkstyle` to make sure that you're off to a good start, style-wise.
 	   **Yes, this includes Javadoc comments;** read [this](https://github.com/cs1302uga/cs1302-styleguide/blob/master/README.md#missingjavadocmethod)
 	   for a recommended way to handle the inherited documentation.
 	 * Make sure the files compile, even though they're not really implemented yet. We recommend making a compile script to simplify
 	   compilation in the future. This will make it easier to test/debug your code.
+   - [ ] Create a class called `cs1302.test.ListTester` and add any code snippets found in the API documentation for the `cs1302.adt` package.
+         Place each code snippet in its own method with an appropriate name. Then, create a `main` method in `ListTester` that calls
+	 the methods you just created. If everything is set up properly, all of the tests should pass because `OracleStringList` is a working
+	 implementation of the `StringList` interface. Now, you will have your testing environment set up and you will be able to 
+	 seamlessly plug in your implementations of `StringList` to test the functionality.
+	 
+   - [ ] If you haven't already done so, make a script to compile all of the classes and run your `ListTester` class. At this point, you will
+         likely see an `UnsupportedOperationException`. That's okay. Those will go away as we start implementing the method bodies.
+   
+   At this point, you should have the complete environment set up with templates for each class you will implement (`ArrayStringList` and
+   `LinkedStringList`) along with a simple tester program. If you take the first three checkpoints seriously, then you will be able to:
+      * write less code for each method and over all;
+      * identify and fix bugs faster;
+      * not have to go back and fix as many style errors and/or comments; and
+      * have a better understanding of how your class works.
 
 1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Thursday, Oct 6th).
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
-     them in `ArrayStringList` or `LinkedStringList`! If you've done the previous steps correctly, you should be able to run your compile
-     script to compile your project. Now, go ahead and create a class called `cs1302.p2.Driver` which contains the code below:
+     them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
+     `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
 
      ```java
-
-     public static void main(String[] args) {
+     public static void testIsEmpty() {
         StringList sl = new ArrayStringList();
 
         // Testing isEmpty on an empty list
@@ -528,7 +549,10 @@ of steps that you may need to take to complete the project.
             System.out.println("isEmpty: Test Failed");
             System.exit(0);
         } // if
+     } // testIsEmpty
 
+     public static void testSize() {
+        StringList sl = new ArrayStringList();
         // Testing size on an empty list
         if (sl.size() == 0) {
             System.out.println("size: Test Passed");
@@ -536,75 +560,61 @@ of steps that you may need to take to complete the project.
             System.out.println("size: Test Failed");
             System.exit(0);
         } // if
-     } // main
-
+     } // testSize
      ```
 
-     If you've done everything properly so far, this should run and print two passing messages to the console. The code above contains two
-     possible test cases that we could run when grading your program. As you are working through other methods, you will want to add test
-     cases in `Driver` to make sure those methods are working. In general, it is best to put each test case in its own method instead
-     of putting them all in `main`.
+     If you want to avoid rewriting the above methods for `LinkedStringList`, think about how you can modify the input parameters and
+     use polymorphism to avoid duplicating this code.
+     
+     If you've done everything properly so far, this should run and print two "Test Passed" messages to the console. The code above contains two
+     possible test cases that we could run when grading your program. Your `ListTester` class should already contain simple tests for some of the
+     other methods in the `StringList` interface.
 
      At this point, you should have the basic foundation for your program done including skeleton code, a compile script, and a good understanding
-     of what all of the methods do (and how they do them). The order in which you complete the other methods is up to you. However, we
-     recommend completing one of the child classes before continuing with `BaseStringList`.
+     of what all of the methods do (and how they do them). As you move forward, we
+     recommend completing the methods in the order described below. 
+     
+     **Make sure to do one method at a time, fully test it, run `check1302`, and do a proper `git commit` to save your modifications before moving to the next method.**
 
-1. Implement `ArrayStringList` (Suggested Deadline: Friday, Oct 7th):
-   - [ ] Write the code for the default constructor. You will likely need to introduce
-         instance variables into the class to keep track of object state.
-   - [ ] For each of the independent methods you identified earlier, attempt to
-         write them. You may need to introduce more instance variables, as needed, into
-	 the class to keep track of object state.
-	 * Not only should you implement these methods, but **you should test them too**.
-	   Add code to your driver program that creates a list object, calls these methods,
-	   and make sure that they work. When you create a test method, have the method
-	   perform it's test on a `StringList` instead of an `ArrayStringList`. That
-	   way, you'll know that it works from the perspective of the interface.
-	 * Run `checkstyle` to make sure that you're still good, style-wise.
-	 * Get a method to work? Go ahead and `git commit` what you have with a good
-	   log message.
-   - [ ] Move on to a small set of methods that depend on the ones that you have
-         already implemented. Implement them, test them, and make sure your file
-	 passes `checkstyle`.
-	 * When testing, you should rerun all previous tests and make sure they still
-	   work. This iterative process of testing code is sometimes called
-	   _regression testing_. You may need to go back and fix a bug in a method
-	   you have already written.
-	 * Don't forget to `git commit` whenever you get something to work.
-   - [ ] Repeat the last step until you have all methods implemented. If you take
-         these suggestions seriously, then you will be able to:
-	 * write less code for each method and over all;
-	 * identify and fix bugs faster;
-	 * not have to go back and fix as many style errors and/or comments; and
-	 * have a better understanding of how your class works.
+1. Implement the methods in the order they are listed below (Friday, Feb 24th)
+   **check the method detail section for hints and more details about each method before implementing**
+   
+   * `BaseStringList`: constructor, `size`, and `isEmpty`
+   * `ArrayStringList`: constructor, `add`, and `get`
+   * `BaseStringList`: `makeString` and `toString`
 
-1. Implement `LinkedStringList` (Suggested Deadline: Monday, Oct 10th):
+   Now, you can improve your `ListTester` class by creating objects of type `ArrayStringList`, adding items to it, and printing the list to the console!
+   
+   When testing, you should rerun all previous tests and make sure they still work. 
+   This iterative process of testing code is sometimes called _regression testing_. 
+   You may need to go back and fix a bug in a method you have already written.
+   
+   * `BaseStringList`: `contains` and `add`
+   * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time.
 
+1. Implement `LinkedStringList` (Suggested Deadline: Monday, Feb 27th):
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of object state. This
 	 class stores its elements internally in a way that is different from the other class.
-   - [ ] Follow the same steps outlined above for the first class.
-         * If possible, write and test one method at a time.
-         * When it comes time to write tests, **hold the front door!** You already
-	   wrote the tests. If your test methods operate on a `StringList`, then
+   - [ ] Complete the remaining methods in the order they are presented in the UML diagram above. 
+         * When it comes time to write tests, if your test methods operate on a `StringList`, then
 	   there is probably very little, if any, changes that you need to make
 	   in order to test the methods in this class.
-	 * Is this method implemented _exactly_ the same way in your other class?
 	 * Don't forget to `git commit` whenever you get something to work.
 	 * Don't skip using `checkstyle`. If you've been using it as recommended,
 	   you should start to notice how many fewer fixes you're having to make
 	   to keep your code in valid style.
 
-1. Implement `BaseStringList` (Suggested Deadline: Wednesday, Oct 12th):
+1. Implement `BaseStringList` (Suggested Deadline: Wednesday, Mar 1st):
    - [ ] Now that you have `ArrayStringList` and `LinkedStringList` working, it will likely be easier to understand how to
-      write the other methods in `BaseStringList`. While writing each method, be sure to use the
-      methods you implemented in the children. The beauty of having the abstract parent is that we only have to write
+      write the remaining methods in `BaseStringList`. While writing each method, be sure to use the
+      methods you implemented in the children where appropriate. The beauty of having the abstract parent is that we only have to write
       these methods once and they will work on objects of any child type! Remember, the parent class does not need to understand
       the underlying data structure (array) in this case. It just needs to call the appropriate methods to
       implement its actions.
    - [ ] Test, run `checkstyle`, and commit often while working on these methods.
 
-1. Final Run-through (Suggested Deadline: Thursday, Oct 13th):
+1. Final Run-through (Suggested Deadline: Friday, Mar 3rd):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
    - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
