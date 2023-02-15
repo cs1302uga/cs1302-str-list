@@ -99,7 +99,7 @@ parent class.
 
 For this project, you will *NOT* have access to the `.java` files for the
 interface. Instead, you will have access to the generated API documentation
-for the [`StringList` interface](https://webwork.cs.uga.edu/~mepcott/cs1302-phased-list/1/cs1302/adt/StringList.html)(may require VPN connection to view).
+for the [`StringList` interface](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html)(may require VPN connection to view).
 Implementors should make sure that each method functions or behaves as described
 by the interface's API documentation.
 
@@ -117,7 +117,7 @@ contains some suggestions on how to work through the project from start to finis
 
 * [Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
 * [ADTS and Lists Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md)
-* [API Documentation for Phase 1 Starter Code](https://webwork.cs.uga.edu/~mepcott/cs1302-phased-list/1/index.html)(may require VPN connection to view)
+* [API Documentation for Phase 1 Starter Code](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/package-summary.html)(may require VPN connection to view)
 
 ## Project Requirements & Grading
 
@@ -490,12 +490,12 @@ of steps that you may need to take to complete the project.
 	   to write and will minimize the number of bugs in your code.
 	 * Here is an example: If there are multiple methods that have a step that
 	   gets an element from a specific index in the list, then you might have
-	   that method call the list's [`get`](https://webwork.cs.uga.edu/~mepcott/cs1302-phased-list/1/cs1302/adt/StringList.html#get(int))(may require VPN
+	   that method call the list's [`get`](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html#get(int))(may require VPN
 	   connection to view) 
 	   method instead of directly accessing the underlying data structure (array or linked list) which
 	   might require writing the same loop multiple times.
 	 * Consider drawing out diagrams similar to the diagrams to the provided
-	 [Examples](https://github.com/cs1302uga/cs1302-tutorials/blob/master/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
+	 [Examples](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
    - [ ] Based on the previous suggestion, draw out what the method dependencies
          are for each method (i.e., what method depends on what). If you notice
 	 any circular dependencies, then those should be eliminated.
