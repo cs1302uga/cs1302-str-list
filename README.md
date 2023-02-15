@@ -140,7 +140,7 @@ code for classes in `cs1302.adt`. However, you do have access to the _byte code_
 documentation website. You will need to use both `StringList` and `Node` in your code since `BaseStringList`
 depends on `StringList` (it implements it) and `LinkedStringList` depends on `Node`.
 
-![UML Diagram 1](phase1.png)
+![UML Diagram 1](ProjectDiagram.svg)
 
 The specific requirements for each class are presented below.
 
