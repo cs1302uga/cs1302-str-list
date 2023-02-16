@@ -134,7 +134,7 @@ For this project, you are required to create two different classes that
 implement the same interface via a common abstract parent. While the specific
 details are listed later in this document, the following diagram illustrates the
 general relationship between your classes and the interface. The package `cs1302.adt`
-is provided for you in the `phase1.jar` file which is included in the download for the
+is provided for you in the `cs1302-str-list.jar` file which is included in the download for the
 project (details later). You do not have access to the source
 code for classes in `cs1302.adt`. However, you do have access to the _byte code_ and the API
 documentation website. You will need to use both `StringList` and `Node` in your code since `BaseStringList`
@@ -273,21 +273,21 @@ made to modify your submission to evaluate other requirements.
   directory `cs1302-phased-list`:
 
   ```
-  $ javac -d bin -cp phase1.jar src/cs1302/p2/BaseStringList.java
+  $ javac -d bin -cp cs1302-str-list.jar src/cs1302/p2/BaseStringList.java
   ```
 
   Remember, when you compile `.java` files individually, there might be
   dependencies between the files. In such cases, the order in which you
   compile the code matters. Also, if more than one default package is needed
-  (e.g., `phase1.jar` and some other directory like `bin`), then a colon `:`
+  (e.g., `cs1302-str-list.jar` and some other directory like `bin`), then a colon `:`
   can be used to separate each path in a list of multiple paths supplied
-  to `-cp` (e.g., `-cp phase1.jar:bin`). Since `ArrayStringList` and `LinkedStringList`
-  depend on files in `phase1.jar` and `BaseStringList` (in `bin`), we need
+  to `-cp` (e.g., `-cp cs1302-str-list.jar:bin`). Since `ArrayStringList` and `LinkedStringList`
+  depend on files in `cs1302-str-list.jar` and `BaseStringList` (in `bin`), we need
   both to be on the classpath as follows:
 
   ```
-  $ javac -cp bin:phase1.jar -d bin src/cs1302/p2/ArrayStringList.java
-  $ javac -cp bin:phase1.jar -d bin src/cs1302/p2/LinkedStringList.java
+  $ javac -cp bin:cs1302-str-list.jar -d bin src/cs1302/p2/ArrayStringList.java
+  $ javac -cp bin:cs1302-str-list.jar -d bin src/cs1302/p2/LinkedStringList.java
   ```
 
 * __Development Environment:__ This project must *must compile and run* 
@@ -341,7 +341,7 @@ made to modify your submission to evaluate other requirements.
   `ArrayStringList` pointing to `LinkedStringList` or vise-versa.
 
   ```
-  $ jdeps -v -cp phase1.jar bin
+  $ jdeps -v -cp cs1302-str-list.jar bin
   ```
 
 * **No `java.util.Arrays` Dependency:** <a id="no-java-util-arrays"/>You
@@ -690,17 +690,17 @@ Below are some frequently asked questions related to this project.
    reduce the redundancy you see in the example above. Your test code does not need
    to look like what we provided; it's just an illustrative example.
 
-1. **What is `phase1.jar`?**
+1. **What is `cs1302-str-list.jar`?**
 
    In Java, `.jar` files are Java™ Archive (JAR) files that bundle multiple files into a single
    compressed file. Typically a JAR file contains the package directories and `.class` files
    for a library. This is just like the `bin` directory that you are used to, except it's all
-   bundled into a single file. For example, the `phase1.jar` file contains the package directories
+   bundled into a single file. For example, the `cs1302-str-list.jar` file contains the package directories
    and `.class` files for `cs1302.adt.StringList`. If you are in the same directory as
-   `phase1.jar`, then you can use the following command to take peek into the archive:
+   `cs1302-str-list.jar`, then you can use the following command to take peek into the archive:
 
    ```
-   $ jar -tf phase1.jar
+   $ jar -tf cs1302-str-list.jar
    ```
 
    You should notice that the top-level directory in the JAR file is `cs1302`, which means that
@@ -727,7 +727,7 @@ Below are some frequently asked questions related to this project.
    ```
    $ javadoc1302 --StringList.java \
      USUAL_JAVADOC_OPTIONS_HERE \
-     -classpath phase1.jar \
+     -classpath cs1302-str-list.jar \
      -link https://docs.oracle.com/en/java/javase/17/docs/api/
    ```
 
