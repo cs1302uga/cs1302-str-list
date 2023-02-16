@@ -113,7 +113,7 @@ Based on discussions with past students, we have prepared a
 [Suggested Checklist](#appendix---suggested-checklist) section in the Appendices which
 contains some suggestions on how to work through the project from start to finish.
 
-### Suggested Reading
+### Required Prerequisite Reading
 
 * [Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
 * [ADTS and Lists Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md)
@@ -142,7 +142,8 @@ depends on `StringList` (it implements it) and `LinkedStringList` depends on `No
 
 <img alt="UML Diagram" src="ProjectDiagram.svg" align="center">
 
-The specific requirements for each class are presented below.
+The specific requirements for each class are presented below (See the [Suggested Checklist](#appendix---suggested-checklist)
+for the suggested order of implementation).
 
 * **`BaseStringList`:** Create the abstract `cs1302.p2.BaseStringList` class such that it properly
   implements a subset of the abstract methods of `StringList`. Since `BaseStringList` is abstract, it is
