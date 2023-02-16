@@ -150,8 +150,8 @@ for the suggested order of implementation).
   not mandatory to implement all methods of `StringList` within this class. The exact list of methods this class
   must implement are listed in the method section for `BaseStringList` in the provided UML diagram above.
   Remember, since `BaseStringList` is an abstract parent to both `ArrayStringList` and `LinkedStringList`,
-  it's methods must be implemented without reference to the underlying data structure. In other words,
-  within `BaseStringList`, you should not use arrays or nodes. The code contained in this class must be
+  its methods must be implemented without reference to the underlying data structure. In other words,
+  **within `BaseStringList`, you cannot use arrays or nodes**. The code contained in this class must be
   general enough to work with both.
 
   * **Note:** The methods that are listed in the UML diagram in `BaseStringList` must be implemented
@@ -426,6 +426,10 @@ public class Driver {
 
 } // Driver
 ```
+
+We have also provided images showing how various method calls on both `ArrayStringList` and `LinkedStringList`
+objects from a driver program will impact the underlying instance variables of each. You can find those examples
+in the [ADT and Links Reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
 
 ## Submission Instructions
 
