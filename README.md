@@ -264,14 +264,14 @@ made to modify your submission to evaluate other requirements.
 
 * **Project Directory Structure:** <a id="struct"/>The location of the default
   package for the source code should be a direct subdirectory of
-  `cs1302-phased-list` called `src`. When the project is compiled,
+  `cs1302-str-list` called `src`. When the project is compiled,
   the `-d` option should be used with `javac` to make the default package
-  for compiled code a direct subdirectory of `cs1302-phased-list`
+  for compiled code a direct subdirectory of `cs1302-str-list`
   called `bin`.
 
   If you follow this structure, then you would type the following to compile
   `BaseStringList.java` to the `bin` directory, assuming you are in the top-level project
-  directory `cs1302-phased-list`:
+  directory `cs1302-str-list`:
 
   ```
   $ javac -d bin -cp cs1302-str-list.jar src/cs1302/p2/BaseStringList.java
@@ -437,18 +437,18 @@ You will be submitting your project via Odin before the deadline indicated
 near the top of this document. Make sure your project files
 are on `odin.cs.uga.edu`. Change into the parent directory of your
 project directory. If you've followed the instructions provided in this document,
-then the name of your project directory is likely `cs1302-phased-list`.
+then the name of your project directory is likely `cs1302-str-list`.
 While in your project's parent directory, execute the following command:
 
 ```
-$ check1302 cs1302-phased-list/src
+$ check1302 cs1302-str-list/src
 ```
 
 If there are style guide violations, then fix them and retest your code! Once
 you have no style guide violations, you can submit using the following command:
 
 ```
-$ submit cs1302-phased-list csci-1302
+$ submit cs1302-str-list csci-1302
 ```
 
 If you have any problems submitting your project then please send a private
