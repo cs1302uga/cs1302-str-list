@@ -538,7 +538,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Thursday, Oct 6th).
+1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Thursday, Feb 23rd).
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
      them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
      `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
