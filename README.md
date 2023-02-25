@@ -239,7 +239,7 @@ point total. That is, they are all or nothing.
   is not appropriate for this assignment. However, static constants are
   perfectly fine.
   
-  * **(20 points) Code Style Guidelines:** You should be consistent with the style
+  * **(20 points) Code Style Guidelines<a id="style"/>:** You should be consistent with the style
   aspect of your code in order to promote readability. Every `.java` file that
   you include as part of your submission for this project must be in valid style
   as defined in the [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
