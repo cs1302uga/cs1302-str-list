@@ -489,7 +489,7 @@ of steps that you may need to take to complete the project.
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
-	 would occur if the driver program executed the line `sl.append("end")` on a preexisting object of
+	 would occur if the driver program executed the line `sl.contains(1, "end")` on a preexisting object of
 	 a class that implements `StringList`? Use the code examples in the documentation to get you started.
    - [ ] For each method in the interface, try to write down what you
          think the basic steps need to be in order to produce the desired outcome.
