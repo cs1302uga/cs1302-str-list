@@ -157,7 +157,7 @@ for the suggested order of implementation).
 
   * **Note:** The methods that are listed in the UML diagram in `BaseStringList` must be implemented
     in that class. You are not allowed to move any of them into `ArrayStringList` or `LinkedStringList`.
-    You may, however, find that you can more one or more methods from `ArrayStringList` and `LinkedStringList`
+    You may, however, find that you can move one or more methods from `ArrayStringList` and `LinkedStringList`
     up into `BaseStringList`. Moving methods up is allowed. In fact, it is encouraged. Any method that you can
     move up only has to be written once! However, accomplishing this will require some thought. We hope that
     all of you spend some time trying to ensure that `ArrayStringList` and `LinkedStringList` only contain the
@@ -396,7 +396,7 @@ Additionally, we have provided an oracle class (`cs1302.oracle.OracleStringList`
 in your driver program. The oracle will allow you to run test cases that you write using a trusted implementation of
 `StringList` so you can compare the oracle output to the output of your `StringList` implementations.
 
-Here is an example `Driver` class that us set up to run the test cases with all three implementation. You would just need
+Here is an example `Driver` class that is set up to run the test cases with all three implementation. You would just need
 to uncomment the implementation you wanted to use:
 
 ```java
