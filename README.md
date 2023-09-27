@@ -68,13 +68,8 @@ to the copyright notice and licensing information at the bottom of this document
 
 If there has been an update and you have already cloned the project to Odin,
 then you can update your copy of the project using the <code>$ git pull</code>
-command while inside of your project directory.
-
-* **2023-02-24-FRI:** Updated `OracleStringList` in `cs1302-str-list.jar` to fix a bug
-  in the `reverse()` method. Special thanks to OP in
-  [Piazza @722](https://piazza.com/class/lby6x9w37w575q/post/722) for pointing it out!
-  Students can use `git pull origin main` to get an updated copy of `cs1302-str-list.jar`
-  or use `wget` with [this URL](https://github.com/cs1302uga/cs1302-str-list/raw/main/cs1302-str-list.jar).
+command while inside of your project directory. We will make a Piazza announcement
+if this is something that you are expected to do.
 
 ## Project Description
 In this project, you will be providing two different implementations of
