@@ -17,7 +17,7 @@ late penalty does not start applying until after the final date listed.
 
 * **WED 2023-10-11 (Oct 11) @ 11:55 PM EST (`+10` SB Extra Credit)**
 * **THU 2023-10-12 (Oct 12) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **FRI 2023-10-13 (Mar 03) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **FRI 2023-10-13 (Oct 13) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
 
