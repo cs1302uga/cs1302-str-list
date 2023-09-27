@@ -1,11 +1,11 @@
-# CSCI 1302 - String List Project v2023.sp
+# CSCI 1302 - String List Project v2023.fa
 
-![Approved for: Spring 2023](https://img.shields.io/badge/Approved%20for-Spring%202023-magenta)
+![Approved for: Fall 2023](https://img.shields.io/badge/Approved%20for-Fall%202023-green)
 
 ![Unrelated image from page 177 of "Punch" (1841)](https://i.imgur.com/7TdqL1v.jpg)
 
 This document contains the description for String List
-project assigned to the students in the Spring 2023 CSCI 1302 classes
+project assigned to the students in the Fall 2023 CSCI 1302 classes
 at the University of Georgia.
 
 ## Deadline Options
@@ -15,9 +15,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated Submission-Based (SB) extra credit. The
 late penalty does not start applying until after the final date listed.
 
-* **WED 2023-03-01 (Mar 01) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **THU 2023-03-02 (Mar 02) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **FRI 2023-03-03 (Mar 03) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2023-10-11 (Oct 11) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **THU 2023-10-12 (Oct 12) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **FRI 2023-10-13 (Mar 03) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
 
@@ -35,7 +35,7 @@ late penalty does not start applying until after the final date listed.
   * [Absolute Requirements](#absolute-requirements)
 * [How to Download the Project](#how-to-download-the-project)
 * [Submission Instructions](#submission-instructions)
-* [Appendix - Suggested Checklist](#appendix---suggested-checklist)
+* [Appendix - Suggested Checklist](#appendix---project-checklist)
 * [Appendix - FAQ](#appendix---faq)
 
 ## Course-Specific Learning Outcomes
@@ -111,7 +111,7 @@ users (e.g., graders) will use these additional methods (even if declared with
 methods may help avoid redundancy and promote code reuse within an implementation.
 
 Based on discussions with past students, we have prepared a
-[Suggested Checklist](#appendix---suggested-checklist) section in the Appendices which
+[Suggested Checklist](#appendix---project-checklist) section in the Appendices which
 contains some suggestions on how to work through the project from start to finish.
 
 ### Required Prerequisite Reading
@@ -143,7 +143,7 @@ depends on `StringList` (it implements it) and `LinkedStringList` depends on `No
 
 <img alt="UML Diagram" src="ProjectDiagram.svg" align="center">
 
-The specific requirements for each class are presented below (See the [Suggested Checklist](#appendix---suggested-checklist)
+The specific requirements for each class are presented below (See the [Project Checklist](#appendix---project-checklist)
 for the suggested order of implementation).
 
 * **`BaseStringList`:** Create the abstract `cs1302.p2.BaseStringList` class such that it properly
@@ -466,7 +466,7 @@ read the entire project description, including the [FAQ](#appendix---faq).
 These steps are suggesions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
-1. Preparation (Suggested Deadline: Monday, Feb 20th):
+1. Preparation (Suggested Deadline: Saturday, Sep 30th):
 
    - [ ] Read through the entire project description, including the appendices,
          and **write down questions as you go**.
@@ -480,7 +480,7 @@ of steps that you may need to take to complete the project.
 	   testing your code, you will replace `OracleStringList` with `ArrayStringList` and `LinkedStringList`.
    - [ ] Read both of them again! This time, you may be able to answer some of your own questions.
 
-1. Before you write any code (Suggested Deadline: Tuesday, Feb 21st):
+1. Before you write any code (Suggested Deadline: Sunday, Oct 1st):
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
@@ -509,7 +509,7 @@ of steps that you may need to take to complete the project.
 	   start with in the next phase of your development. We'll call these the
 	   independent methods.
 
-1. Prepare to implement the methods (Suggested Deadline: Wednesday, Feb 22nd):
+1. Prepare to implement the methods (Suggested Deadline: Monday, October 2nd):
 
    - [ ] Create the `.java` files for each implementing class and the common parent (`BaseStringList`) and make sure all classes
          are in the correct package and all entities have the proper visibility. For each file:
@@ -539,7 +539,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Thursday, Feb 23rd).
+1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, October 3rd):
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
      them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
      `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
@@ -582,7 +582,7 @@ of steps that you may need to take to complete the project.
      
      **Make sure to do one method at a time, fully test it, run `check1302`, and do a proper `git commit` to save your modifications before moving to the next method.**
 
-1. Implement the methods in the order they are listed below (Friday, Feb 24th)
+1. Implement the methods in the order they are listed below (Wednesday, October 4th):
    **check the method detail section for hints and more details about each method before implementing**
    
    * `BaseStringList`: constructor, `size`, and `isEmpty`
@@ -598,7 +598,7 @@ of steps that you may need to take to complete the project.
    * `BaseStringList`: `contains` and `add`
    * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time.
 
-1. Implement `LinkedStringList` (Suggested Deadline: Monday, Feb 27th):
+1. Implement `LinkedStringList` (Suggested Deadline: Saturday, October 7th):
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of object state. This
 	 class stores its elements internally in a way that is different from the other class.
@@ -611,7 +611,7 @@ of steps that you may need to take to complete the project.
 	   you should start to notice how many fewer fixes you're having to make
 	   to keep your code in valid style.
 
-1. Implement `BaseStringList` (Suggested Deadline: Wednesday, Mar 1st):
+1. Implement `BaseStringList` (Suggested Deadline: Monday, October 9th):
    - [ ] Now that you have `ArrayStringList` and `LinkedStringList` working, it will likely be easier to understand how to
       write the remaining methods in `BaseStringList`. While writing each method, be sure to use the
       methods you implemented in the children where appropriate. The beauty of having the abstract parent is that we only have to write
@@ -620,7 +620,7 @@ of steps that you may need to take to complete the project.
       implement its actions.
    - [ ] Test, run `checkstyle`, and commit often while working on these methods.
 
-1. Final Run-through (Suggested Deadline: Friday, Mar 3rd):
+1. Final Run-through (Suggested Deadline: Wednesday, October 11th):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
    - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
