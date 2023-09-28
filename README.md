@@ -393,10 +393,10 @@ You are responsible for implementing test cases to test your `ArrayStringList` a
 a few examples of test cases provided in the checklist and FAQ sections below.
 
 Additionally, we have provided an oracle class (`cs1302.oracle.OracleStringList`) that you can instantiate and use
-in your driver program. The oracle will allow you to run test cases that you write using a trusted implementation of
+in your driver program (ListTester). The oracle will allow you to run test cases that you write using a trusted implementation of
 `StringList` so you can compare the oracle output to the output of your `StringList` implementations.
 
-Here is an example `Driver` class that is set up to run the test cases with all three implementation. You would just need
+Here is an example driver class (ListTester) that is set up to run the test cases with all three implementations. You would just need
 to uncomment the implementation you wanted to use:
 
 ```java
@@ -405,7 +405,7 @@ package cs1302.p2;
 import cs1302.adt.StringList;
 import cs1302.oracle.OracleStringList;
 
-public class Driver {
+public class ListTester {
     public static void main(String[] args) {
         StringList sl;
 
@@ -425,11 +425,11 @@ public class Driver {
 	// more calls to test methods down here...
     } // main
 
-} // Driver
+} // ListTester
 ```
 
 We have also provided images showing how various method calls on both `ArrayStringList` and `LinkedStringList`
-objects from a driver program will impact the underlying instance variables of each. You can find those examples
+objects from a driver program (ListTester) will impact the underlying instance variables of each. You can find those examples
 in the [ADT and Links Reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
 
 ## Submission Instructions
@@ -484,7 +484,7 @@ of steps that you may need to take to complete the project.
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
-	 would occur if the driver program executed the line `sl.contains(1, "end")` on a preexisting object of
+	 would occur if the driver program (ListTester) executed the line `sl.contains(1, "end")` on a preexisting object of
 	 a class that implements `StringList`? Use the code examples in the documentation to get you started.
    - [ ] For each method in the interface, try to write down what you
          think the basic steps need to be in order to produce the desired outcome.
@@ -623,7 +623,7 @@ of steps that you may need to take to complete the project.
 1. Final Run-through (Suggested Deadline: Wednesday, October 11th):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
-   - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
+   - [ ] Your driver (ListTester) program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
          the checkstyle audit.
 
 **We very much appreciate any and all feedback you might have for this section.**
@@ -679,7 +679,7 @@ Below are some frequently asked questions related to this project.
    } // testAddNegative
    ```
 
-   In a driver class that you create for testing, you might write something similar to
+   In a driver class (ListTester) that you create for testing, you might write something similar to
    the following in a method somewhere:
 
    ```java
