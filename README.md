@@ -61,7 +61,7 @@ In accordance with this notice, I must caution you **not** to
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the instructions contained
 in the [How to Download the Project](#how-to-download-the-project)
-section below in order to do your development on odin. Furthermore, you must adhere
+section below in order to do your development on Odin. Furthermore, you must adhere
 to the copyright notice and licensing information at the bottom of this document.
 
 ## Updates
@@ -79,7 +79,7 @@ an ordered collection of elements. The list implementation can decide how the
 elements are stored internally so long as users are able to interact with
 those elements via the methods defined in the interface. In this way, a list
 is an example of an *abstract data type* (ADT). To put it another way: while
-the implementor needs to understand the specific details of the implementation
+the implementer needs to understand the specific details of the implementation
 (in order to write the code to make it happen), the user of a list does not.
 The users simply interact with objects of the list implementation through
 the methods defined in the interface.
@@ -95,16 +95,16 @@ elements even though the internal storage may be larger. The internal array is h
 concern to the user of the class.
 
 Each implementation of the `StringList` interface will be a concrete class with specific functional
-and non-functional requirements. These classes need to implement `StringList`via a common abstract
+and non-functional requirements. These classes need to implement `StringList` via a common abstract
 parent class.
 
 For this project, you will *NOT* have access to the `.java` files for the
 interface. Instead, you will have access to the generated API documentation
-for the [`StringList` interface](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html)(may require VPN connection to view).
-Implementors should make sure that each method functions or behaves as described
+for the [`StringList` interface](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html) (may require VPN connection to view).
+Implementers should make sure that each method functions or behaves as described
 by the interface's API documentation.
 
-Implementors are always free to implement additional methods in addition
+Implementers are always free to implement additional methods in addition
 to the ones defined by the interface. However, they should not assume that
 users (e.g., graders) will use these additional methods (even if declared with
 `public` visibility), since they are not defined in the interface. These additional
@@ -118,7 +118,7 @@ contains some suggestions on how to work through the project from start to finis
 
 * [Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
 * [ADTS and Lists Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md)
-* [API Documentation for the Starter Code](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/package-summary.html)(may require VPN connection to view)
+* [API Documentation for the Starter Code](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/package-summary.html) (may require VPN connection to view)
 
 ## Project Requirements & Grading
 
@@ -169,7 +169,7 @@ for the suggested order of implementation).
 
   * You must explicitly define and document a default constructor for this class.
     The initial size of an `ArrayStringList` is `0` regardless of the list's
-    underlying storage--remember, the list's internal storage and the list
+    underlying storage — remember, the list's internal storage and the list
     itself are two different things. Here is the signature:
 
     ```java
@@ -193,7 +193,7 @@ for the suggested order of implementation).
     **you should actively avoid: i) increasing the array size by one; and ii)
     doubling the size of the array.** Increasing by one is wasteful as it requires making
     a new array and copying over all elements every time an item is added. Doubling the size
-    of the array may be wasteful at large sizes as there may be many indeces that contain `null`.
+    of the array may be wasteful at large sizes as there may be many indices that contain `null`.
     Somewhere in between is more reasonable (increasing by 50%? increasing by 25%? We'll leave
     the details up to you). Furthermore, **you should not set the initial array size to `0` or to the
     largest number that is allowed.**
@@ -207,7 +207,7 @@ for the suggested order of implementation).
 
   * You must explicitly define and document a default constructor for this class.
     The initial size of a `LinkedStringList` is `0` regardless of the list's
-    underlying storage--remember, the list's internal storage and the list
+    underlying storage — remember, the list's internal storage and the list
     itself are two different things. Here is the signature:
 
     ```java
@@ -308,7 +308,7 @@ made to modify your submission to evaluate other requirements.
   size of the array does not have to be the same size as the initial size
   of the list. Whenever the size of the list is about to exceed the size
   of its array, the list should dynamically allocate a new array of a larger
-  size and copy the contents over--please consider writing and documenting
+  size and copy the contents over — please consider writing and documenting
   a private support method to do this. If you use Java's `java.util.ArrayList`
   class or something similar (e.g., a class that implements `java.util.Collection`), 
   then that will result in an immediate violation
@@ -334,7 +334,7 @@ made to modify your submission to evaluate other requirements.
   implementation of the `StringList` interface in another implementation.
   For example, you cannot use the `ArrayStringList` class inside of your
   `LinkedStringList` class or vise versa. Additionally, `BaseStringList`
-  cannot depend on either of the `StringList` implementations, however,
+  cannot depend on either of the `StringList` implementations; however,
   it can (and should) depend on the `StringList` interface itself. If you have any
   questions about this, then please ask your instructor.
 
@@ -350,7 +350,7 @@ made to modify your submission to evaluate other requirements.
   are also NOT allowed to use the `java.util.Arrays` class. For more
   information on why, please read [this FAQ item](#java-util-Arrays). You
   can also check for the presence of this dependency using `jdeps` as described
-  in an earlier requirement -- you don't want to see `java.util.Arrays` anywhere
+  in an earlier requirement — you don't want to see `java.util.Arrays` anywhere
   in the output.
 
   **NOTE:** The `System.arraycopy` method is in the `System` class and not
@@ -366,7 +366,7 @@ via interface polymorphism.
 ## How to Download the Project
 
 On Odin, execute the following terminal command in order to download the project
-files into sub-directory within your present working directory:
+files into a sub-directory within your present working directory:
 
 ```
 $ git clone --depth 1 https://github.com/cs1302uga/cs1302-str-list.git
@@ -438,7 +438,7 @@ You will be submitting your project via Odin before the deadline indicated
 near the top of this document. Make sure your project files
 are on `odin.cs.uga.edu`. Change into the parent directory of your
 project directory. If you've followed the instructions provided in this document,
-then the name of your project directory is likely `cs1302-str-list`.
+then the name of your project directory is `cs1302-str-list`.
 While in your project's parent directory, execute the following command:
 
 ```
@@ -643,7 +643,7 @@ Below are some frequently asked questions related to this project.
    then this complicates trying to compile and test one method at a time.
 
    It is possible to _temporarily_ include a `throw` statement in the method
-   until you commit to writing the return statement. I reccommend throwing
+   until you commit to writing the return statement. I recommend throwing
    an instance of [`UnsupportedOperationException`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/UnsupportedOperationException.html)
    if you choose to do this. For example, you might write something like this for the `get(int)`
    method:
@@ -692,7 +692,7 @@ Below are some frequently asked questions related to this project.
    testAddNegative(lsl);
    ```
 
-   We reccommend that you further break up your test code into methods in order to
+   We recommend that you further break up your test code into methods in order to
    reduce the redundancy you see in the example above. Your test code does not need
    to look like what we provided; it's just an illustrative example.
 
@@ -710,7 +710,7 @@ Below are some frequently asked questions related to this project.
    ```
 
    You should notice that the top-level directory in the JAR file is `cs1302`, which means that
-   the JAR file itself can serve as the default package for compiled code--this is why we
+   the JAR file itself can serve as the default package for compiled code — this is why we
    use with `-cp` in examples given elsewhere in this project description.
 
 1. **Why doesn't `{@inheritDoc}` seem to work (and other Javadoc-related questions)?**
