@@ -15,9 +15,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated Submission-Based (SB) extra credit. The
 late penalty does not start applying until after the final date listed.
 
-* **WED 2023-10-11 (Oct 11) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **THU 2023-10-12 (Oct 12) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **FRI 2023-10-13 (Oct 13) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2024-02-28 (Feb 28) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **THU 2024-02-29 (Feb 29) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **FRI 2024-03-01 (Mar 01) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
 
@@ -466,7 +466,7 @@ read the entire project description, including the [FAQ](#appendix---faq).
 These steps are suggestions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
-1. Preparation (Suggested Deadline: Saturday, Sep 30th):
+1. Preparation (Suggested Deadline: Saturday, February 17th):
 
    - [ ] Read through the entire project description, including the appendices,
          and **write down questions as you go**.
@@ -480,7 +480,7 @@ of steps that you may need to take to complete the project.
 	   testing your code, you will replace `OracleStringList` with `ArrayStringList` and `LinkedStringList`.
    - [ ] Read both of them again! This time, you may be able to answer some of your own questions.
 
-1. Before you write any code (Suggested Deadline: Sunday, Oct 1st):
+1. Before you write any code (Suggested Deadline: Sunday, February 18th):
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
@@ -509,7 +509,7 @@ of steps that you may need to take to complete the project.
 	   start with when you begin the next phase of your development. We'll call
            these the independent methods.
 
-1. Prepare to implement the methods (Suggested Deadline: Monday, October 2nd):
+1. Prepare to implement the methods (Suggested Deadline: Monday, February 19th):
 
    - [ ] Create the `.java` files for each implementing class and the common parent (`BaseStringList`) and make sure all classes
          are in the correct package and all entities have the proper visibility. For each file:
@@ -539,7 +539,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, October 3rd):
+1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, February 20th):
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
      them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
      `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
@@ -582,7 +582,7 @@ of steps that you may need to take to complete the project.
      
      **Make sure to do one method at a time, fully test it, run `check1302`, and do a proper `git commit` to save your modifications before moving to the next method.**
 
-1. Implement the methods in the order they are listed below (Wednesday, October 4th):
+1. Implement the methods in the order they are listed below (Wednesday, February 21st):
    **check the method detail section for hints and more details about each method before implementing**
    
    * `BaseStringList`: constructor, `size`, and `isEmpty`
@@ -598,7 +598,7 @@ of steps that you may need to take to complete the project.
    * `BaseStringList`: `contains` and `add`
    * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time.
 
-1. Implement `LinkedStringList` (Suggested Deadline: Saturday, October 7th):
+1. Implement `LinkedStringList` (Suggested Deadline: Saturday, February 24th):
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
@@ -611,7 +611,7 @@ of steps that you may need to take to complete the project.
 	   you should start to notice how many fewer fixes you have to make
 	   to keep your code in valid style.
 
-1. Implement `BaseStringList` (Suggested Deadline: Monday, October 9th):
+1. Implement `BaseStringList` (Suggested Deadline: Monday, February 26th):
    - [ ] Now that you have `ArrayStringList` and `LinkedStringList` working, it will likely be easier to understand how to
       write the remaining methods in `BaseStringList`. While writing each method, be sure to use the
       methods you implemented in the children where appropriate. The beauty of having the abstract parent is that we only have to write
@@ -620,7 +620,7 @@ of steps that you may need to take to complete the project.
       implement its actions.
    - [ ] Test, run `checkstyle`, and commit often while working on these methods.
 
-1. Final Run-through (Suggested Deadline: Wednesday, October 11th):
+1. Final Run-through (Suggested Deadline: Wednesday, February 28th):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
    - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
@@ -737,7 +737,7 @@ Below are some frequently asked questions related to this project.
      -link https://docs.oracle.com/en/java/javase/17/docs/api/
    ```
 
-   **NOTE:** The command presented above is a mult-line command since it's so long. There is a single
+   **NOTE:** The command presented above is a multi-line command since it's so long. There is a single
    space before the `\` at the end of the first two lines. When typing this out, you should type a
    single space followed by `\`, then immediately press your `RET` key to continue to the next line.
    If typed correctly, you will see a `>` on the next line and you can continue typing the command.
