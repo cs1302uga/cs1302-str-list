@@ -1,10 +1,10 @@
-# CSCI 1302 - String List Project v2023.fa
+# CSCI 1302 - String List Project v2024.sp
 
-![Approved for: Fall 2023](https://img.shields.io/badge/Approved%20for-Fall%202023-green)
+![Approved for: Spring 2024](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
 
 ![Unrelated image from page 177 of "Punch" (1841)](https://i.imgur.com/7TdqL1v.jpg)
 
-This document contains the description for String List
+This document contains the description for the String List
 project assigned to the students in the Fall 2023 CSCI 1302 classes
 at the University of Georgia.
 
@@ -61,7 +61,7 @@ In accordance with this notice, I must caution you **not** to
 fork this repository on GitHub if you have an account. Doing so will more than
 likely make your copy of the project publicly visible. Please follow the instructions contained
 in the [How to Download the Project](#how-to-download-the-project)
-section below in order to do your development on Odin. Furthermore, you must adhere
+section below to do your development on Odin. Furthermore, you must adhere
 to the copyright notice and licensing information at the bottom of this document.
 
 ## Updates
@@ -76,7 +76,7 @@ In this project, you will be providing two different implementations of
 a `StringList` interface, which defines different operations that one
 should be able to do with a *list of strings*. A list is simply an object that represents
 an ordered collection of elements. The list implementation can decide how the
-elements are stored internally so long as users are able to interact with
+elements are stored internally so long as users can interact with
 those elements via the methods defined in the interface. In this way, a list
 is an example of an *abstract data type* (ADT). To put it another way: while
 the implementer needs to understand the specific details of the implementation
@@ -84,7 +84,7 @@ the implementer needs to understand the specific details of the implementation
 The users simply interact with objects of the list implementation through
 the methods defined in the interface.
 
-**In order to truly understand this project,**  you must take a step back and think about how
+**To truly understand this project,**  you must take a step back and think about how
 a list object and its storage are separate things. A list uses its storage to actually store
 its elements. For example, the size of a list does not have to be the same as the size of its
 storage, although the storage is likely at least as big as the list. For example, say you have
@@ -107,7 +107,7 @@ by the interface's API documentation.
 Implementers are always free to implement additional methods in addition
 to the ones defined by the interface. However, they should not assume that
 users (e.g., graders) will use these additional methods (even if declared with
-`public` visibility), since they are not defined in the interface. These additional
+`public` visibility) since they are not defined in the interface. These additional
 methods may help avoid redundancy and promote code reuse within an implementation.
 
 Based on discussions with past students, we have prepared a
@@ -148,7 +148,7 @@ for the suggested order of implementation).
 
 * **`BaseStringList`:** Create the abstract `cs1302.p2.BaseStringList` class such that it properly
   implements a subset of the abstract methods of `StringList`. Since `BaseStringList` is abstract, it is
-  not mandatory to implement all methods of `StringList` within this class. The exact list of methods this class
+  not mandatory to implement all methods of `StringList` within this class. The exact methods this class
   must implement are listed in the method section for `BaseStringList` in the provided UML diagram above.
   Remember, since `BaseStringList` is an abstract parent to both `ArrayStringList` and `LinkedStringList`,
   its methods must be implemented without reference to the underlying data structure. In other words,
@@ -188,7 +188,7 @@ for the suggested order of implementation).
 -->
 
   * Over the lifetime of an `ArrayStringList` object, its internal storage may
-    change in order to accomodate more list elements. When your code increases
+    change to accommodate more list elements. When your code increases
     the size of an `ArrayStringList` object's internal array storage,
     **you should actively avoid: i) increasing the array size by one; and ii)
     doubling the size of the array.** Increasing by one is wasteful as it requires making
@@ -226,7 +226,7 @@ for the suggested order of implementation).
 ### Non-Functional Requirements
 
 A non-functional requirement is *subtracted* from your point total if
-not satisfied. In order to emphasize the importance of these requirements,
+not satisfied. To emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing.
 
@@ -235,12 +235,12 @@ point total. That is, they are all or nothing.
   perfectly fine.
   
   * **(20 points) Code Style Guidelines<a id="style"/>:** You should be consistent with the style
-  aspect of your code in order to promote readability. Every `.java` file that
+  aspect of your code to promote readability. Every `.java` file that
   you include as part of your submission for this project must be in valid style
   as defined in the [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide).
   All of the individual code style guidelines listed in that document are part
   of this single non-functional requirement. If `check1302` on Odin reports any
-  style volatons for your submission, then 5 points will be subtracted from your
+  style violations for your submission, then 5 points will be subtracted from your
   earned point total **for each violation**, up to a maximum deduction of 20 points.
 
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
@@ -254,7 +254,7 @@ point total. That is, they are all or nothing.
   include information that someone reading your code would need to know but not someone using it
   (that is more appropriate for a Javadoc comment). A good heuristic for this: if you can imagine that,
   after six months, you might not be able to tell in under a few seconds what a code block is doing,
-  then then you probably need to write some in-line comments.
+  then you probably need to write some in-line comments.
 
 ### Absolute Requirements
 
@@ -365,7 +365,7 @@ via interface polymorphism.
 
 ## How to Download the Project
 
-On Odin, execute the following terminal command in order to download the project
+On Odin, execute the following terminal command to download the project
 files into a sub-directory within your present working directory:
 
 ```
@@ -374,7 +374,7 @@ $ git clone --depth 1 https://github.com/cs1302uga/cs1302-str-list.git
 
 This should create a directory called `cs1302-str-list` in
 your present working directory that contains a clone of the
-project's respository. Take a look around.
+project's repository. Take a look around.
 
 If any updates to the project files are announced by your instructor, you can
 merge those changes into your copy by changing into your project's directory
@@ -392,9 +392,9 @@ your instructor.
 You are responsible for implementing test cases to test your `ArrayStringList` and `LinkedStringList` classes. There are
 a few examples of test cases provided in the checklist and FAQ sections below.
 
-Additionally, we have provided an oracle class (`cs1302.oracle.OracleStringList`) that you can instantiate and use
+Additionally, we have provided an Oracle class (`cs1302.oracle.OracleStringList`) that you can instantiate and use
 in your driver program (`cs1302.test.ListTester`). The oracle will allow you to run test cases that you write using a trusted implementation of
-`StringList` so you can compare the oracle output to the output of your `StringList` implementations.
+`StringList` so you can compare the Oracle output to the output of your `StringList` implementations.
 
 Here is an example driver class called `ListTester` that is set up to run the test cases with all three implementations. You would just need
 to uncomment the implementation you wanted to use:
@@ -463,7 +463,7 @@ To help you with planning out this project, here are some suggested steps you
 can take that your instructors believe will help you complete the project more
 easily. Some of the items in this checklist may not make sense until you have
 read the entire project description, including the [FAQ](#appendix---faq).
-These steps are suggesions and, therefore, do not constitute an exhaustive list
+These steps are suggestions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
 1. Preparation (Suggested Deadline: Saturday, Sep 30th):
@@ -500,14 +500,14 @@ of steps that you may need to take to complete the project.
 	   connection to view) 
 	   method instead of directly accessing the underlying data structure (array or linked list) which
 	   might require writing the same loop multiple times.
-	 * Consider drawing out diagrams similar to the diagrams to the provided
+	 * Consider drawing out diagrams similar to the diagrams in the provided
 	 [Examples](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
    - [ ] Based on the previous suggestion, draw out what the method dependencies
          are for each method (i.e., what method depends on what). If you notice
 	 any circular dependencies, then those should be eliminated.
 	 * The methods that don't depend on other methods are good candidates to
-	   start with in the next phase of your development. We'll call these the
-	   independent methods.
+	   start with when you begin the next phase of your development. We'll call
+           these the independent methods.
 
 1. Prepare to implement the methods (Suggested Deadline: Monday, October 2nd):
 
@@ -517,7 +517,7 @@ of steps that you may need to take to complete the project.
 	   classes (`ArrayStringList` and `LinkedStringList`), you don't need to include method signatures for inherited methods that aren't overridden
 	   in the child classes.
 	 * In the body of each method, throw an `UnsupportedOperationException` as suggested
-	   in [the FAQ](#faq-uoe). **Do not attempt to actually implement the method yet.**
+	   in [the FAQ](#faq-uoe). **Do not attempt to implement the method yet.**
 	 * Run `checkstyle` to make sure that you're off to a good start, style-wise.
 	   **Yes, this includes Javadoc comments;** read [this](https://github.com/cs1302uga/cs1302-styleguide/blob/master/README.md#missingjavadocmethod)
 	   for a recommended way to handle the inherited documentation.
@@ -600,15 +600,15 @@ of steps that you may need to take to complete the project.
 
 1. Implement `LinkedStringList` (Suggested Deadline: Saturday, October 7th):
    - [ ] Write the code for the default constructor. You will likely need to introduce
-         instance variables into the class to keep track of object state. This
+         instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
    - [ ] Complete the remaining methods in the order they are presented in the UML diagram above. 
          * When it comes time to write tests, if your test methods operate on a `StringList`, then
-	   there is probably very little, if any, changes that you need to make
-	   in order to test the methods in this class.
+	   there are probably very few if any, changes that you need to make
+	   to test the methods in this class.
 	 * Don't forget to `git commit` whenever you get something to work.
 	 * Don't skip using `checkstyle`. If you've been using it as recommended,
-	   you should start to notice how many fewer fixes you're having to make
+	   you should start to notice how many fewer fixes you have to make
 	   to keep your code in valid style.
 
 1. Implement `BaseStringList` (Suggested Deadline: Monday, October 9th):
@@ -658,11 +658,11 @@ Below are some frequently asked questions related to this project.
 
    In this project, you're not explicitly tasked with handling exceptions; instead, you're
    tasked with making sure that they happen when they're supposed to happen. When testing
-   your methods, you will want to make sure that one of things you check is that your
+   your methods, you will want to make sure that one of the things you check is that your
    methods do, in fact, throw the exceptions when they're expected to per the API documentation.
 
    Here is an example of a test method you might write to test whether or not your `add(int, String)`
-   method thows an `IndexOutOfBoundsException` when a negative value is supplied for the `index`
+   method throws an `IndexOutOfBoundsException` when a negative value is supplied for the `index`
    parameter:
 
    ```java
@@ -703,7 +703,7 @@ Below are some frequently asked questions related to this project.
    for a library. This is just like the `bin` directory that you are used to, except it's all
    bundled into a single file. For example, the `cs1302-str-list.jar` file contains the package directories
    and `.class` files for `cs1302.adt.StringList`. If you are in the same directory as
-   `cs1302-str-list.jar`, then you can use the following command to take peek into the archive:
+   `cs1302-str-list.jar`, then you can use the following command to take a peek into the archive:
 
    ```
    $ jar -tf cs1302-str-list.jar
@@ -756,7 +756,7 @@ Below are some frequently asked questions related to this project.
    **No**, this violates [a requirement](#no-java-util-arrays); instead, you should write your
    own version of the method you want to use. Most of the methods that you think you might need
    from that class can be written in 6 lines of code or less (often much less), and writing your
-   own version will serve as some much needed practice.
+   own version will serve as some much-needed practice.
 
 Have a question? Please post it on the course Piazza.
 
