@@ -156,10 +156,10 @@ for the suggested order of implementation).
   general enough to work with both.
 
   * **Note:** The `size` instance variable in `BaseStringList` is shown as `#size` in the UML diagram
-    to designate that has _protected_ visibility and, therefore, must be declared in your Java code
+    to designate that it has _protected_ visibility and, therefore, must be declared in your Java code
     using the `protected` visibility modifier. The child classes of `BaseStringList` inherit their own
     copies of this protected `size` instance variable and have direct access to them. This variable
-    should be initialized in the `BaseStringList` constructor. You must NOT be redeclare the `size`
+    should be initialized in the `BaseStringList` constructor. You must NOT be re-declare the `size`
     variable in either of the child classes. For more information about _protected_ visibility,
     refer to the
     [Protected Visibility reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/visibility/protected.rst).
