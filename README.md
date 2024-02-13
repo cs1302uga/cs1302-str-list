@@ -159,7 +159,7 @@ for the suggested order of implementation).
     to designate that it has _protected_ visibility and, therefore, must be declared in your Java code
     using the `protected` visibility modifier. The child classes of `BaseStringList` inherit their own
     copies of this protected `size` instance variable and have direct access to them. This variable
-    should be initialized in the `BaseStringList` constructor. You must NOT be re-declare the `size`
+    should be initialized in the `BaseStringList` constructor. You must NOT re-declare the `size`
     variable in either of the child classes. For more information about _protected_ visibility,
     refer to the
     [Protected Visibility reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/visibility/protected.rst).
