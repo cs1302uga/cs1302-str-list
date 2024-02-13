@@ -53,7 +53,7 @@ late penalty does not start applying until after the final date listed.
 * **LO4.c:** (Partial) Design, create and use inheritance relationships in a software solution.
 * **LO7.c:** (Partial) Use common abstract data types and structures, including lists, queues, arrays, and stacks in solving
   typical problems.
-  
+
 ## Academic Honesty
 
 **You agree to the Academic Honesty policy as outlined in the course syllabus.**
@@ -155,6 +155,15 @@ for the suggested order of implementation).
   **within `BaseStringList`, you cannot use arrays or nodes**. The code contained in this class must be
   general enough to work with both.
 
+  * **Note:** The `size` instance variable in `BaseStringList` is shown as `#size` in the UML diagram
+    to designate that has _protected_ visibility and, therefore, must be declared in your Java code
+    using the `protected` visibility modifier. The child classes of `BaseStringList` inherit their own
+    copies of this protected `size` instance variable and have direct access to them. This variable
+    should be initialized in the `BaseStringList` constructor. You must NOT be redeclare the `size`
+    variable in either of the child classes. For more information about _protected_ visibility,
+    refer to the
+    [Protected Visibility reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/visibility/protected.rst).
+
   * **Note:** The methods that are listed in the UML diagram in `BaseStringList` must be implemented
     in that class. You are not allowed to move any of them into `ArrayStringList` or `LinkedStringList`.
     You may, however, find that you can move one or more methods from `ArrayStringList` and `LinkedStringList`
@@ -213,7 +222,7 @@ for the suggested order of implementation).
     ```java
     public LinkedStringList();
     ```
-        
+
   * There is a requirement related to this class's storage included
     in the [Absolute Requirements](#absolute-requirements) section.
 
@@ -233,7 +242,7 @@ point total. That is, they are all or nothing.
 * **(0 points) [RECOMMENDED] No Static Variables:** Use of static variables
   is not appropriate for this assignment. However, static constants are
   perfectly fine.
-  
+
   * **(20 points) Code Style Guidelines<a id="style"/>:** You should be consistent with the style
   aspect of your code to promote readability. Every `.java` file that
   you include as part of your submission for this project must be in valid style
@@ -246,7 +255,7 @@ point total. That is, they are all or nothing.
   **NOTE:** The [CS1302 Code Style Guide](https://github.com/cs1302uga/cs1302-styleguide)
   includes instructions on how to use the `check1302` program to check
   your code for compliance on Odin.
-  
+
   * **In-line Documentation (10 points):** Code blocks should be adequately documented
   using in-line comments. With in-line comments, you should explain tricky, large, complicated,
   or confusing blocks of code. This is especially necessary whenever a block of code
@@ -263,12 +272,12 @@ it will result in an immediate zero for the assignment. In many cases, a violati
 will prevent the graders from evaluating your functional requirements. No attempts will be
 made to modify your submission to evaluate other requirements.
 
-* **Project Directory Structure:** <a id="struct"/>The location of the default
-  package for the source code should be a direct subdirectory of
-  `cs1302-str-list` called `src`. When the project is compiled,
-  the `-d` option should be used with `javac` to make the default package
-  for compiled code a direct subdirectory of `cs1302-str-list`
-  called `bin`.
+* **Project Directory Structure:** <a id="struct"></a>
+  The location of the default package for the source code should be a
+  direct subdirectory of `cs1302-str-list` called `src`. When the
+  project is compiled, the `-d` option should be used with `javac` to
+  make the default package for compiled code a direct subdirectory of
+  `cs1302-str-list` called `bin`.
 
   If you follow this structure, then you would type the following to compile
   `BaseStringList.java` to the `bin` directory, assuming you are in the top-level project
@@ -292,8 +301,8 @@ made to modify your submission to evaluate other requirements.
   $ javac -cp bin:cs1302-str-list.jar -d bin src/cs1302/p2/LinkedStringList.java
   ```
 
-* __Development Environment:__ This project must *must compile and run* 
-  correctly on Odin using the specific version of Java enabled by the 
+* **Development Environment:** This project must *must compile and run*
+  correctly on Odin using the specific version of Java enabled by the
   CSCI 1302 shell profile.
 
   If you decide to introduce additional `.java` files into your project,
@@ -310,7 +319,7 @@ made to modify your submission to evaluate other requirements.
   of its array, the list should dynamically allocate a new array of a larger
   size and copy the contents over — please consider writing and documenting
   a private support method to do this. If you use Java's `java.util.ArrayList`
-  class or something similar (e.g., a class that implements `java.util.Collection`), 
+  class or something similar (e.g., a class that implements `java.util.Collection`),
   then that will result in an immediate violation
   of this non-functional requirement, regardless of any use of a regular
   array elsewhere in the class. This requirement also prohibits any use of
@@ -323,19 +332,20 @@ made to modify your submission to evaluate other requirements.
   of elements that can fit into an array (because there is no underlying array).
   Instead, it's limited only by the available memory for the Java program
   using the `LinkedStringList` object.
-  If you use Java's `java.util.LinkedList` class or something similar 
+  If you use Java's `java.util.LinkedList` class or something similar
   (e.g., a class that implements `java.util.Collection`), then that
   will result in an immediate violation of this non-functional requirement,
   regardless of any use of any `Node` objects elsewhere in the class.
   This requirement also prohibits any use of third-party implementations
   of list or list-like interfaces.
 
-* **No Implementation Dependencies:** <a id="no-impl-deps"/>You are not permitted to use one
-  implementation of the `StringList` interface in another implementation.
-  For example, you cannot use the `ArrayStringList` class inside of your
-  `LinkedStringList` class or vise versa. Additionally, `BaseStringList`
-  cannot depend on either of the `StringList` implementations; however,
-  it can (and should) depend on the `StringList` interface itself. If you have any
+* **No Implementation Dependencies:** <a id="no-impl-deps"></a>
+  You are not permitted to use one implementation of the `StringList`
+  interface in another implementation.  For example, you cannot use
+  the `ArrayStringList` class inside of your `LinkedStringList` class
+  or vise versa. Additionally, `BaseStringList` cannot depend on
+  either of the `StringList` implementations; however, it can (and
+  should) depend on the `StringList` interface itself. If you have any
   questions about this, then please ask your instructor.
 
   You can check this using the `jdeps` tool. Inspect the output of
@@ -346,8 +356,8 @@ made to modify your submission to evaluate other requirements.
   $ jdeps -v -cp cs1302-str-list.jar bin
   ```
 
-* **No `java.util.Arrays` Dependency:** <a id="no-java-util-arrays"/>You
-  are also NOT allowed to use the `java.util.Arrays` class. For more
+* **No `java.util.Arrays` Dependency:** <a id="no-java-util-arrays"></a>
+  You are also NOT allowed to use the `java.util.Arrays` class. For more
   information on why, please read [this FAQ item](#java-util-Arrays). You
   can also check for the presence of this dependency using `jdeps` as described
   in an earlier requirement — you don't want to see `java.util.Arrays` anywhere
@@ -497,7 +507,7 @@ of steps that you may need to take to complete the project.
 	 * Here is an example: If there are multiple methods that have a step that
 	   gets an element from a specific index in the list, then you might have
 	   that method call the list's [`get`](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/StringList.html#get(int))(may require VPN
-	   connection to view) 
+	   connection to view)
 	   method instead of directly accessing the underlying data structure (array or linked list) which
 	   might require writing the same loop multiple times.
 	 * Consider drawing out diagrams similar to the diagrams in the provided
@@ -526,12 +536,12 @@ of steps that you may need to take to complete the project.
    - [ ] Create a driver class called `cs1302.test.ListTester` and add any code snippets found in the API documentation for the `cs1302.adt` package.
          Place each code snippet in its own method with an appropriate name. Then, create a `main` method in `ListTester` that calls
 	 the methods you just created. If everything is set up properly, all of the tests should pass because `OracleStringList` is a working
-	 implementation of the `StringList` interface. Now, you will have your testing environment set up and you will be able to 
+	 implementation of the `StringList` interface. Now, you will have your testing environment set up and you will be able to
 	 seamlessly plug in your implementations of `StringList` to test the functionality.
-	 
+
    - [ ] If you haven't already done so, make a script to compile all of the classes and run your `ListTester` class. At this point, you will
          likely see an `UnsupportedOperationException`. That's okay. Those will go away as we start implementing the method bodies.
-   
+
    At this point, you should have the complete environment set up with templates for each class you will implement (`ArrayStringList` and
    `LinkedStringList`) along with a simple tester program. If you take the first three checkpoints seriously, then you will be able to:
       * write less code for each method and overall;
@@ -539,7 +549,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"/>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, February 20th):
+1. <a id="tests"></a>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, February 20th):
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
      them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
      `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
@@ -571,30 +581,30 @@ of steps that you may need to take to complete the project.
 
      If you want to avoid rewriting the above methods for `LinkedStringList`, think about how you can modify the input parameters and
      use polymorphism to avoid duplicating this code.
-     
+
      If you've done everything properly so far, this should run and print two "Test Passed" messages to the console. The code above contains two
      possible test cases that we could run when grading your program. Your `ListTester` class should already contain simple tests for some of the
      other methods in the `StringList` interface.
 
      At this point, you should have the basic foundation for your program done including skeleton code, a compile script, and a good understanding
      of what all of the methods do (and how they do them). As you move forward, we
-     recommend completing the methods in the order described below. 
-     
+     recommend completing the methods in the order described below.
+
      **Make sure to do one method at a time, fully test it, run `check1302`, and do a proper `git commit` to save your modifications before moving to the next method.**
 
 1. Implement the methods in the order they are listed below (Wednesday, February 21st):
    **check the method detail section for hints and more details about each method before implementing**
-   
+
    * `BaseStringList`: constructor, `size`, and `isEmpty`
    * `ArrayStringList`: constructor, `add`, and `get`
    * `BaseStringList`: `makeString` and `toString`
 
    Now, you can improve your `ListTester` class by creating objects of type `ArrayStringList`, adding items to it, and printing the list to the console!
-   
-   When testing, you should rerun all previous tests and make sure they still work. 
-   This iterative process of testing code is sometimes called _regression testing_. 
+
+   When testing, you should rerun all previous tests and make sure they still work.
+   This iterative process of testing code is sometimes called _regression testing_.
    You may need to go back and fix a bug in a method you have already written.
-   
+
    * `BaseStringList`: `contains` and `add`
    * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time.
 
@@ -602,7 +612,7 @@ of steps that you may need to take to complete the project.
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
-   - [ ] Complete the remaining methods in the order they are presented in the UML diagram above. 
+   - [ ] Complete the remaining methods in the order they are presented in the UML diagram above.
          * When it comes time to write tests, if your test methods operate on a `StringList`, then
 	   there are probably very few if any, changes that you need to make
 	   to test the methods in this class.
@@ -634,7 +644,7 @@ how to make it better after you complete your project.
 
 Below are some frequently asked questions related to this project.
 
-1. **<a id="faq-uoe"/>Can I technically implement the methods first before I implement them correctly?**
+1. **<a id="faq-uoe"></a>Can I technically implement the methods first before I implement them correctly?**
 
    You may wish to write out the method signatures for the methods you are
    implementing from the interface with empty bodies in an attempt to get started.
@@ -654,7 +664,7 @@ Below are some frequently asked questions related to this project.
    } // get
    ```
 
-1. **<a id="test-exceptions"/>How can I test that my methods throw the exceptions?**
+1. **<a id="test-exceptions"></a>How can I test that my methods throw the exceptions?**
 
    In this project, you're not explicitly tasked with handling exceptions; instead, you're
    tasked with making sure that they happen when they're supposed to happen. When testing
@@ -746,12 +756,12 @@ Below are some frequently asked questions related to this project.
 
    //-->
 
-   **SUGGESTION:** <a id="javadoc-comments"> **Do NOT manually copy the entire comment and parameter details from the API website.**
+   **SUGGESTION:** <a id="javadoc-comments"></a> **Do NOT manually copy the entire comment and parameter details from the API website.**
    Instead, include a summary sentence and `{@inheritDoc}` to make it clear to readers of the source
    code that your intent is to inherit the documentation. An example of this can be found in the
    style guide, [here](https://github.com/cs1302uga/cs1302-styleguide#missingjavadocmethod).
 
-1. **<a id="java-util-Arrays"/>Is the `java.util.Arrays` class allowed?**
+1. **<a id="java-util-Arrays"></a>Is the `java.util.Arrays` class allowed?**
 
    **No**, this violates [a requirement](#no-java-util-arrays); instead, you should write your
    own version of the method you want to use. Most of the methods that you think you might need
