@@ -619,6 +619,8 @@ of steps that you may need to take to complete the project.
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
    - [ ] Complete the remaining methods in the order they are presented in the UML diagram above.
+         * Remember, there are detailed diagrams to help you implement `get` and `add` in a linked list
+           in the "ADTs and Links" chapter of the textbook.
          * When it comes time to write tests, if your test methods operate on a `StringList`, then
 	   there are probably very few if any, changes that you need to make
 	   to test the methods in this class.
