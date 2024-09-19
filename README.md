@@ -15,9 +15,9 @@ perform their final submission via the `submit` command before the date/times li
 below automatically receive the associated Submission-Based (SB) extra credit. The
 late penalty does not start applying until after the final date listed.
 
-* **FRI 2024-03-01 (Mar 01) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **SAT 2024-03-02 (Mar 02) @ 11:55 PM EST (`+5` SB Extra Credit)**
-* **SUN 2024-03-03 (Mar 03) @ 11:55 PM EST (`+0` SB Extra Credit)**
+* **WED 2024-10-11 (Oct 11) @ 11:55 PM EST (`+10` SB Extra Credit)**
+* **THU 2024-10-12 (Oct 12) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **FRI 2024-10-13 (Oct 13) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
 
@@ -116,8 +116,8 @@ contains some suggestions on how to work through the project from start to finis
 
 ### Required Prerequisite Reading
 
-* [Interfaces Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/interfaces/interfaces.md)
-* [ADTS and Lists Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md)
+* [Interfaces Tutorial](https://cs1302uga.github.io/cs1302-book/java/interfaces/interfaces-index.html)
+* [ADTs and Lists Tutorial](https://cs1302uga.github.io/cs1302-book/java/adt-and-links/adt-and-links-index.html)
 * [API Documentation for the Starter Code](https://webwork.cs.uga.edu/~mepcott/cs1302-str-list/cs1302/adt/package-summary.html) (may require VPN connection to view)
 
 ## Project Requirements & Grading
@@ -343,14 +343,14 @@ made to modify your submission to evaluate other requirements.
   You are not permitted to use one implementation of the `StringList`
   interface in another implementation.  For example, you cannot use
   the `ArrayStringList` class inside of your `LinkedStringList` class
-  or vise versa. Additionally, `BaseStringList` cannot depend on
+  or vice versa. Additionally, `BaseStringList` cannot depend on
   either of the `StringList` implementations; however, it can (and
   should) depend on the `StringList` interface itself. If you have any
   questions about this, then please ask your instructor.
 
   You can check this using the `jdeps` tool. Inspect the output of
   the command below after everything is compiled. You don't want to see
-  `ArrayStringList` pointing to `LinkedStringList` or vise-versa.
+  `ArrayStringList` pointing to `LinkedStringList` or vice versa.
 
   ```
   $ jdeps -v -cp cs1302-str-list.jar bin
@@ -440,7 +440,7 @@ public class ListTester {
 
 We have also provided images showing how various method calls on both `ArrayStringList` and `LinkedStringList`
 objects from a driver program (like `ListTester`) will impact the underlying instance variables of each. You can find those examples
-in the [ADT and Links Reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
+in the [ADT and Links Reading](https://cs1302uga.github.io/cs1302-book/java/adt-and-links/examples-both-implementations.html).
 
 ## Submission Instructions
 
@@ -476,7 +476,7 @@ read the entire project description, including the [FAQ](#appendix---faq).
 These steps are suggestions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
-1. Preparation (Suggested Deadline: Saturday, February 17th):
+1. Preparation (Suggested Deadline: Friday, September 27th):
 
    - [ ] Read through the entire project description, including the appendices,
          and **write down questions as you go**.
@@ -490,7 +490,7 @@ of steps that you may need to take to complete the project.
 	   testing your code, you will replace `OracleStringList` with `ArrayStringList` and `LinkedStringList`.
    - [ ] Read both of them again! This time, you may be able to answer some of your own questions.
 
-1. Before you write any code (Suggested Deadline: Sunday, February 18th):
+1. Before you write any code (Suggested Deadline: Saturday, September 28th):
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
@@ -511,7 +511,7 @@ of steps that you may need to take to complete the project.
 	   method instead of directly accessing the underlying data structure (array or linked list) which
 	   might require writing the same loop multiple times.
 	 * Consider drawing out diagrams similar to the diagrams in the provided
-	 [Examples](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/adt-and-links/adt-and-links.md#list-adt---examples-with-both-implementations).
+	 [Examples](https://cs1302uga.github.io/cs1302-book/java/adt-and-links/examples-both-implementations.html).
    - [ ] Based on the previous suggestion, draw out what the method dependencies
          are for each method (i.e., what method depends on what). If you notice
 	 any circular dependencies, then those should be eliminated.
@@ -519,7 +519,7 @@ of steps that you may need to take to complete the project.
 	   start with when you begin the next phase of your development. We'll call
            these the independent methods.
 
-1. Prepare to implement the methods (Suggested Deadline: Monday, February 19th):
+1. Prepare to implement the methods (Suggested Deadline: Sunday, September 29th):
 
    - [ ] Create the `.java` files for each implementing class and the common parent (`BaseStringList`) and make sure all classes
          are in the correct package and all entities have the proper visibility. For each file:
@@ -549,7 +549,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"></a>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Tuesday, February 20th):
+1. <a id="tests"></a>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Monday, September 30th):
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
      them in `ArrayStringList` or `LinkedStringList`! Now, go ahead and add methods called `testIsEmpty()` and `testSize()` to your
      `ListTester` class and call them from the `main` method. The code for these methods should look something like the code below:
@@ -592,7 +592,7 @@ of steps that you may need to take to complete the project.
 
      **Make sure to do one method at a time, fully test it, run `check1302`, and do a proper `git commit` to save your modifications before moving to the next method.**
 
-1. Implement the methods in the order they are listed below (Wednesday, February 21st):
+1. Implement the methods in the order they are listed below (Wednesday, October 2nd):
    **check the method detail section for hints and more details about each method before implementing**
 
    * `BaseStringList`: constructor, `size`, and `isEmpty`
@@ -608,7 +608,7 @@ of steps that you may need to take to complete the project.
    * `BaseStringList`: `contains` and `add`
    * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time.
 
-1. Implement `LinkedStringList` (Suggested Deadline: Saturday, February 24th):
+1. Implement `LinkedStringList` (Suggested Deadline: Saturday, October 5th):
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
@@ -623,7 +623,7 @@ of steps that you may need to take to complete the project.
 	   you should start to notice how many fewer fixes you have to make
 	   to keep your code in valid style.
 
-1. Implement `BaseStringList` (Suggested Deadline: Monday, February 26th):
+1. Implement `BaseStringList` (Suggested Deadline: Wednesday, October 9th):
    - [ ] Now that you have `ArrayStringList` and `LinkedStringList` working, it will likely be easier to understand how to
       write the remaining methods in `BaseStringList`. While writing each method, be sure to use the
       methods you implemented in the children where appropriate. The beauty of having the abstract parent is that we only have to write
@@ -632,7 +632,7 @@ of steps that you may need to take to complete the project.
       implement its actions.
    - [ ] Test, run `checkstyle`, and commit often while working on these methods.
 
-1. Final Run-through (Suggested Deadline: Wednesday, February 28th):
+1. Final Run-through (Suggested Deadline: Friday, October 11th):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
    - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
