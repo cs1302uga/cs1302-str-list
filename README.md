@@ -5,7 +5,7 @@
 ![Unrelated image from page 177 of "Punch" (1841)](https://i.imgur.com/7TdqL1v.jpg)
 
 This document contains the description for the String List
-project assigned to the students in the Spring 2024 CSCI 1302 classes
+project assigned to the students in the Fall 2024 CSCI 1302 classes
 at the University of Georgia.
 
 ## Deadline Options
