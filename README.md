@@ -1,6 +1,6 @@
 # CSCI 1302 - String List Project v2024.sp
 
-![Approved for: Spring 2024](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
+![Approved for: Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
 
 ![Unrelated image from page 177 of "Punch" (1841)](https://i.imgur.com/7TdqL1v.jpg)
 
@@ -613,11 +613,10 @@ of steps that you may need to take to complete the project.
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
    - [ ] Complete the remaining methods in the order they are presented in the UML diagram above.
-         * Remember, there are detailed diagrams to help you implement `get` and `add` in a linked list
-           in the "ADTs and Links" chapter of the textbook.
-         * When it comes time to write tests, if your test methods operate on a `StringList`, then
-	   there are probably very few if any, changes that you need to make
-	   to test the methods in this class.
+	 * Remember, there are detailed diagrams to help you implement `get` and `add` in a linked list
+   	   in the "ADTs and Links" chapter of the textbook.
+	 * When it comes time to write tests, if your test methods operate on a `StringList`, then
+	   there are probably very few if any, changes that you need to make to test the methods in this class.
 	 * Don't forget to `git commit` whenever you get something to work.
 	 * Don't skip using `checkstyle`. If you've been using it as recommended,
 	   you should start to notice how many fewer fixes you have to make
