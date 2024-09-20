@@ -1,4 +1,4 @@
-# CSCI 1302 - String List Project v2024.sp
+# CSCI 1302 - String List Project v2024.fa
 
 ![Approved for: Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
 
