@@ -16,7 +16,7 @@ below automatically receive the associated Submission-Based (SB) extra credit. T
 late penalty does not start applying until after the final date listed.
 
 * **FRI 2024-10-11 (Oct 11) @ 11:55 PM EST (`+10` SB Extra Credit)**
-* **SAT 2024-10-12 (Oct 12) @ 11:55 PM EST (`+5` SB Extra Credit)**
+* **SAT 2024-10-12 (Oct 12) @ 11:55 PM EST (`+10` SB Extra Credit)**
 * **SUN 2024-10-13 (Oct 13) @ 11:55 PM EST (`+0` SB Extra Credit)**
 
 **Read the entirety of this file before beginning your project.**
