@@ -322,7 +322,7 @@ depends on `StringList` (it implements it) and `LinkedStringList` depends on `No
 
 <img alt="UML Diagram" src="ProjectDiagram.svg" align="center">
 
-The specific requirements for each class are presented below (See the [Project Checklist](#appendix---project-checklist)
+The specific requirements for each class are presented below (See the [Project Checklist](#project-checklist)
 for the suggested order of implementation).
 
 * **`BaseStringList`:** Create the abstract `cs1302.p2.BaseStringList` class such that it properly
@@ -535,16 +535,13 @@ made to modify your submission to evaluate other requirements.
   $ jdeps -v -cp cs1302-str-list.jar bin
   ```
 
-* **No `java.util.Arrays` Dependency:** <a id="no-java-util-arrays"></a>
+* **No `java.util.Arrays` (or similar) Dependency:** <a id="no-java-util-arrays"></a>
   You are also NOT allowed to use the `java.util.Arrays` class. For more
   information on why, please read [this FAQ item](#java-util-Arrays). You
   can also check for the presence of this dependency using `jdeps` as described
   in an earlier requirement — you don't want to see `java.util.Arrays` anywhere
-  in the output.
-
-  **NOTE:** The `System.arraycopy` method is in the `System` class and not
-  `java.util.Arrays`; however, its use is frowned upon for the same reasons
-  that we provide [here](#java-util-Arrays) for the `java.util.Arrays` class.
+  in the output. **`System.arraycopy` and the array's `clone` method are also not allowed for similar reasons.**
+  You can use `C-s` and `C-r` in Emacs to see if your files contain these methods.
 
 ### Grading
 
@@ -767,7 +764,7 @@ Below are some frequently asked questions related to this project.
    code that your intent is to inherit the documentation. An example of this can be found in the
    style guide, [here](https://github.com/cs1302uga/cs1302-styleguide#missingjavadocmethod).
 
-1. **<a id="java-util-Arrays"></a>Is the `java.util.Arrays` class allowed?**
+1. **<a id="java-util-Arrays"></a>Is the `java.util.Arrays` class (or similar utilities) allowed?**
 
    **No**, this violates [a requirement](#no-java-util-arrays); instead, you should write your
    own version of the method you want to use. Most of the methods that you think you might need
