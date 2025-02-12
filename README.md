@@ -125,7 +125,7 @@ read the entire project description, including the [FAQ](#appendix---faq).
 These steps are suggestions and, therefore, do not constitute an exhaustive list
 of steps that you may need to take to complete the project.
 
-1. Preparation (Suggested Deadline: Wednesday, February 12th - 14 days before deadline):
+1. Preparation (Suggested Deadline: Sunday, February 16th - 10 days before the first bonus deadline):
 
    - [ ] Read through the entire project description, including the appendices,
          and **write down questions as you go**.
@@ -139,7 +139,7 @@ of steps that you may need to take to complete the project.
 	   testing your code, you will replace `OracleStringList` with `ArrayStringList` and `LinkedStringList`.
    - [ ] Read both of them again! This time, you may be able to answer some of your own questions.
 
-1. Before you write any code (Suggested Deadline: Thursday, February 13th - 13 days before deadline):
+1. Before you write any code (Suggested Deadline: Monday, February 17th - 9 days before the first bonus deadline):
 
    - [ ] For each method in the interface, make sure you understand how to call each method and what a user
          expects to happen when calling that method on an object of an implementing class. For example, what
@@ -168,7 +168,7 @@ of steps that you may need to take to complete the project.
 	   start with when you begin the next phase of your development. We'll call
            these the independent methods.
 
-1. Prepare to implement the methods (Suggested Deadline: Friday, February 14th - 12 days before deadline):
+1. Prepare to implement the methods (Suggested Deadline: Tuesday, February 18th - 8 days before the first bonus deadline):
 
    - [ ] Create the `.java` files for each implementing class and the common parent (`BaseStringList`) and make sure all classes
          are in the correct package and all entities have the proper visibility. For each file:
@@ -200,7 +200,7 @@ of steps that you may need to take to complete the project.
       * not have to go back and fix as many style errors and/or comments; and
       * have a better understanding of how your class works.
 
-1. <a id="tests"></a>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Sunday, February 16th - 10 days before deadline):
+1. <a id="tests"></a>Start by implementing a few methods in `BaseStringList` (Suggested Deadline: Thursday, February 20th - 6 days before the first bonus deadline):
    - [ ] For each feature you implement (for example, the `isEmpty` and `size` methods), start by creating a new `git branch`. Then, `git checkout` your new branch to keep your main branch in a working state.
 
    - [ ] Begin with `size` and `isEmpty`. Since these methods are inherited by the children, we won't need to write
@@ -247,7 +247,7 @@ of steps that you may need to take to complete the project.
 
      Once you finish implementing a new feature, make sure its working tree is clean with `git status`. Then, `git checkout` your main branch and `git merge` your new feature.
 
-1. Implement the methods in the order they are listed below (Monday, February 17th - 9 days before deadline):
+1. Implement the methods in the order they are listed below (Friday, February 21st - 5 days before the first bonus deadline):
    **check the method detail section for hints and more details about each method before implementing**
 
    * `BaseStringList`: constructor, `size`, and `isEmpty`
@@ -263,7 +263,7 @@ of steps that you may need to take to complete the project.
    * `BaseStringList`: `contains` and `add`
    * `ArrayStringList`: complete the remaining methods in the order they are presented in the UML diagram above. Be sure to compile and test one at a time, and take advantage of branching and merging.
 
-1. Implement `LinkedStringList` (Suggested Deadline: Thursday, February 20th - 6 days before deadline):
+1. Implement `LinkedStringList` (Suggested Deadline: Sunday, February 23rd - 3 days before the first bonus deadline):
    - [ ] Write the code for the default constructor. You will likely need to introduce
          instance variables into the class to keep track of the object state. This
 	 class stores its elements internally in a way that is different from the other class.
@@ -277,7 +277,7 @@ of steps that you may need to take to complete the project.
 	   you should start to notice how many fewer fixes you have to make
 	   to keep your code in valid style.
 
-1. Implement `BaseStringList` (Suggested Deadline: Monday, February 24th - 2 days before deadline):
+1. Implement `BaseStringList` (Suggested Deadline: Monday, February 24th - 2 days before the first bonus deadline):
    - [ ] Now that you have `ArrayStringList` and `LinkedStringList` working, it will likely be easier to understand how to
       write the remaining methods in `BaseStringList`. While writing each method, be sure to use the
       methods you implemented in the children where appropriate.
@@ -289,7 +289,7 @@ of steps that you may need to take to complete the project.
       implement its actions.
    - [ ] Test, run `checkstyle`, and commit often while working on these methods.
 
-1. Final Run-through (Suggested Deadline: Wednesday, February 26th - 0 days before deadline):
+1. Final Run-through (Suggested Deadline: Wednesday, February 26th - 0 days before the first bonus deadline):
    - [ ] Thoroughly test all of your methods on objects of both `ArrayStringList` and `LinkedStringList`.
    - [ ] Remember to run `check1302` often and commit changes as you fix bugs.
    - [ ] Your driver program does not need to be submitted. If you choose to submit it, you must make sure it compiles and passes
