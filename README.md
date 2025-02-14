@@ -361,7 +361,7 @@ for the suggested order of implementation).
     itself are two different things. Here is the signature:
 
     ```java
-    public ArrayStringList();
+    public ArrayStringList() {
     ```
 
 <!--  * You must explicitly define and document a copy constructor for this class.
@@ -371,7 +371,7 @@ for the suggested order of implementation).
     the signature:
 
     ```java
-    public ArrayStringList(StringList other);
+    public ArrayStringList(StringList other) {
     ```
 -->
 
@@ -399,7 +399,7 @@ for the suggested order of implementation).
     itself are two different things. Here is the signature:
 
     ```java
-    public LinkedStringList();
+    public LinkedStringList() {
     ```
 
   * There is a requirement related to this class's storage included
