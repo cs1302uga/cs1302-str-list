@@ -1,0 +1,1 @@
+tagSearchIndex = [{"l":"ADT","h":"interface cs1302.adt.StringList","u":"cs1302/adt/StringList.html#ADT"},{"l":"oracle","h":"class cs1302.oracle.OracleStringList","u":"cs1302/oracle/OracleStringList.html#oracle"}];updateSearchResults();

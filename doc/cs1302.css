@@ -1,0 +1,135 @@
+/*
+ * cs1302 custom
+ */
+
+:root {
+    --base-admonition: 156, 62%;
+    --base-important: var(--base-admonition);
+    --base-warning: 9, 100%;
+
+    --palette-admonition-bg: hsla(var(--base-admonition), 95%, 100%);
+    --palette-admonition-bd: hsla(var(--base-admonition), 40%, 100%);
+
+    --palette-important-bg: hsla(var(--base-important), 95%, 100%);
+    --palette-important-bd: hsla(var(--base-important), 40%, 100%);
+
+    --palette-warning-bg: hsla(var(--base-warning), 95%, 100%);
+    --palette-warning-bd: hsla(var(--base-warning), 40%, 100%);
+}
+
+figure {
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+  margin: auto;
+  padding: 0.5em;
+}
+
+.block aside.admonition::before {
+    content: "ASIDE:";
+    font-weight: bold;
+}
+
+.block aside.admonition {
+    margin-top: 1em;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--palette-admonition-bd);
+    border-radius: 6px;
+    border-left-width: 6px;
+}
+
+.block aside.admonition.important::before {
+    content: "IMPORTANT:";
+}
+
+.block aside.admonition.important {
+    border-color: var(--palette-important-bd);
+    background-color: var(--palette-important-bg);
+}
+
+.block aside.admonition.warning::before {
+    content: "WARNING:";
+}
+
+.block aside.admonition.warning {
+    border-color: var(--palette-warning-bd);
+    background-color: var(--palette-warning-bg);
+}
+
+.legalCopy > small {
+    display: inline-block;
+    margin-top: 0.5em;
+}
+
+.about-language {
+    margin-top: unset!important;
+    padding: unset!important;
+    padding-right: 5px!important;
+}
+
+div.cs1302.top {
+    font-variant: all-small-caps;
+    padding: 5px;
+    background-color: #dee3e9;
+}
+
+div.cs1302.top > * {
+    display: inline-flex;
+    margin: unset;
+}
+
+div.cs1302.top .project-name {
+    font-weight: bold;
+}
+
+div.cs1302.top .project-name::after {
+    content: ":";
+}
+
+div.cs1302.top .project-links {
+    padding-left: 6px;
+}
+
+div.cs1302.top .project-links > li {
+    list-style: none;
+}
+
+div.cs1302.top .project-links > li:not(:first-child) {
+    margin-left: 1em;
+}
+
+dl.constructor {
+}
+
+dl.constructor > dt.name,
+dl.constructor > dt.name ~ * {
+    margin: 14px 6px;
+}
+
+dl.constructor > dt.name {
+    border: 1px solid #d0d9e0;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #dee3e9;
+    margin: 0 0 6px;
+    padding: 7px 5px;
+}
+
+dl.constructor > dd > dl > dt {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    color: #4E4E4E;
+}
+
+dl.constructor > dd > dl > dd {
+    margin: 5px 10px 10px 0;
+}
+
+:not(h1, h2, h3, h4, h5, h6) > code, :not(h1, h2, h3, h4, h5, h6) > tt {
+    font-size: 13px;
+}
