@@ -16,7 +16,7 @@ public class LinkedStringList extends BaseStringList {
     /**
      * Reference to the first node in the internal linked list.
      */
-    Node head;
+    private Node head;
 
     // ------------------------------------------------------------------------------------------ //
     // CONSTRUCTOR(S)

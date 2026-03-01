@@ -15,7 +15,7 @@ public class ArrayStringList extends BaseStringList {
     /**
      * Reference to the storage array.
      */
-    String[] items;
+    private String[] items;
 
     // ------------------------------------------------------------------------------------------ //
     // CONSTRUCTOR(S)
