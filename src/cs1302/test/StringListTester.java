@@ -118,6 +118,7 @@ public class StringListTester {
     /**
      * Test Scenario 1.
      *
+     * <p>
      * No exceptions are expected to be thrown when you construct a
      * new, empty string list object using the the class's default
      * constructor (via {@link #newStringList()}).
@@ -138,6 +139,7 @@ public class StringListTester {
     /**
      * Test Scenario 2.
      *
+     * <p>
      * The {@link StringList#size()} of a new string list object is expected to be {@code 0}.
      *
      * @throws AssertionError If the test fails.
@@ -159,6 +161,7 @@ public class StringListTester {
     /**
      * Test Scenario 3.
      *
+     * <p>
      * A new, empty string list should report itself as empty when
      * calling {@link StringList#isEmpty()}.
      *
@@ -184,6 +187,7 @@ public class StringListTester {
     /**
      * Test Scenario 4.
      *
+     * <p>
      * Replace this sentence with your own description of the test.
      *
      * @throws AssertionError If the test fails.
@@ -199,6 +203,7 @@ public class StringListTester {
     /**
      * Test Scenario 5.
      *
+     * <p>
      * Replace this sentence with your own description of the test.
      *
      * @throws AssertionError If the test fails.
