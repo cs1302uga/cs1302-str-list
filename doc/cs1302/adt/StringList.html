@@ -420,7 +420,19 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="size()">
 <h3>size</h3>
 <div class="member-signature"><span class="return-type">int</span>&nbsp;<span class="element-name">size</span>()</div>
-<div class="block">Returns the number of items in this string list.</div>
+<div class="block">Returns the number of items in this string list.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+StringList list = new OracleStringList();
+System.out.println(list.size()); // 0
+
+list.add(0, "a");
+list.add(1, "b");
+System.out.println(list.size()); // 2
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the number of items in this string list</dd>
@@ -433,7 +445,18 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">isEmpty</span>()</div>
 <div class="block">Returns <code>true</code> if this string list has no items.
  More formally, a string list is empty if, and only if, its
- <a href="#size()"><code>size</code></a> is zero.</div>
+ <a href="#size()"><code>size</code></a> is zero.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+StringList list = new OracleStringList();
+System.out.println(list.isEmpty()); // true
+
+list.add(0, "a");
+System.out.println(list.isEmpty()); // false
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> if this string list is empty; <code>false</code> otherwise</dd>
@@ -450,7 +473,26 @@ loadScripts(document, 'script');</script>
  subsequent items are shifted to the right (i.e., one is added to their
  indices).
 
- <aside class="admonition important">
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+StringList list = new OracleStringList();
+list.add(0, "a");
+System.out.println(list); // [a]
+
+list.add(1, "c");
+System.out.println(list); // [a, c]
+
+// insert "b" at index 1 ("c" is shifted right)
+list.add(1, "b");
+System.out.println(list); // [a, b, c]
+
+// insert "z" at index 0 (all items shifted right)
+list.add(0, "z");
+System.out.println(list); // [z, a, b, c]
+</pre>
+
+<aside class="admonition important">
  This method either returns <code>true</code> or throws one of its documented
  exceptions, but never both.
  </aside></div>
@@ -538,7 +580,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="get(int)">
 <h3>get</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">get</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
-<div class="block">Returns the item at the specified index position in this string list.</div>
+<div class="block">Returns the item at the specified index position in this string list.
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c"]</code>:
+<pre class="sourceContainer code java">
+String item0 = list.get(0); // returns "a"
+String item2 = list.get(2); // returns "c"
+// list.get(3) throws IndexOutOfBoundsException
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>index</code> - index of the item to return</dd>
@@ -560,7 +611,18 @@ loadScripts(document, 'script');</script>
  <code>target</code> string. If no such item exists, then <code>false</code> is
  returned.  Unlike the <a href="#add(int,java.lang.String)"><code>add</code></a> methods that throws exceptions
  when called with bad arguments, this <code>contains</code> method
- simply returns <code>false</code> instead.</div>
+ simply returns <code>false</code> instead.
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c", "a"]</code>:
+<pre class="sourceContainer code java">
+System.out.println(list.contains(0, "a"));  // true (found at index 0)
+System.out.println(list.contains(1, "a"));  // true (found at index 3)
+System.out.println(list.contains(2, "b"));  // false ("b" is at index 1, which is before start 2)
+System.out.println(list.contains(4, "a"));  // false (start >= size, returns false without exception)
+System.out.println(list.contains(-1, "a")); // false (start &lt; 0, returns false without exception)
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>start</code> - the index from which to start the search</dd>
@@ -578,7 +640,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">remove</span><wbr><span class="parameters">(int&nbsp;index)</span></div>
 <div class="block">Removes the item at the specified index position in this string list.
  Any items in the string list that were after the removed string are
- shifted to the left (i.e., one is subtracted from their indices).</div>
+ shifted to the left (i.e., one is subtracted from their indices).
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c", "d"]</code>:
+<pre class="sourceContainer code java">
+String removed = list.remove(1); // returns "b"
+System.out.println(removed);     // "b"
+System.out.println(list);        // [a, c, d] ("c" and "d" shifted left)
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>index</code> - index of the item to remove</dd>
@@ -596,7 +667,16 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="return-type"><a href="StringList.html" title="interface in cs1302.adt">StringList</a></span>&nbsp;<span class="element-name">reverse</span>()</div>
 <div class="block">Returns a new string list that contains the items from this
  string list in reverse order. The returned string list must be
- an object of the same class as the calling object.</div>
+ an object of the same class as the calling object.
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c"]</code>:
+<pre class="sourceContainer code java">
+StringList rev = list.reverse();
+System.out.println(rev);  // [c, b, a]
+System.out.println(list); // [a, b, c] (original list is unchanged)
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>a new string list with items from this list in
@@ -659,7 +739,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
-<div class="block">Returns <code>makeString("[", ", ", "]")</code>.</div>
+<div class="block">Returns <code>makeString("[", ", ", "]")</code>.
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c"]</code>:
+<pre class="sourceContainer code java">
+System.out.println(list.toString()); // [a, b, c]
+</pre>
+</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
@@ -673,7 +760,17 @@ loadScripts(document, 'script');</script>
 <h3>clear</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
 <div class="block">Removes all of the items from this string list. The string list will be
- <a href="#isEmpty()"><code>empty</code></a> after this method returns.</div>
+ <a href="#isEmpty()"><code>empty</code></a> after this method returns.
+
+<p>
+Here is an example, assuming <code>list</code> refers to a string list containing <code>["a", "b", "c"]</code>:
+<pre class="sourceContainer code java">
+list.clear();
+System.out.println(list.isEmpty()); // true
+System.out.println(list.size());    // 0
+System.out.println(list);           // []
+</pre>
+</div>
 </section>
 </li>
 <li>

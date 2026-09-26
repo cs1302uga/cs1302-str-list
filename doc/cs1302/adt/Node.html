@@ -254,7 +254,15 @@ loadScripts(document, 'script');</script>
 <h3>Node</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Node</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;item,
  <a href="Node.html" title="class in cs1302.adt">Node</a>&nbsp;next)</span></div>
-<div class="block">Construct a node with the specified <code>item</code> and <code>next</code>.</div>
+<div class="block">Construct a node with the specified <code>item</code> and <code>next</code>.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node node2 = new Node("b");
+Node node1 = new Node("a", node2);
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>item</code> - the item to be contained in this node</dd>
@@ -266,7 +274,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.lang.String)">
 <h3>Node</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Node</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;item)</span></div>
-<div class="block">Construct a node with the specified <code>item</code> but no next node.</div>
+<div class="block">Construct a node with the specified <code>item</code> but no next node.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node node = new Node("a"); // node.getNext() is null
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>item</code> - the item to be contained in this node</dd>
@@ -285,7 +300,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getItem()">
 <h3>getItem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getItem</span>()</div>
-<div class="block">Returns the item in this node.</div>
+<div class="block">Returns the item in this node.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node node = new Node("a");
+System.out.println(node.getItem()); // "a"
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the item in this node</dd>
@@ -296,7 +319,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setItem(java.lang.String)">
 <h3>setItem</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setItem</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;item)</span></div>
-<div class="block">Sets the item in this node.</div>
+<div class="block">Sets the item in this node.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node node = new Node("a");
+node.setItem("z");
+System.out.println(node.getItem()); // "z"
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>item</code> - the item in this node</dd>
@@ -307,7 +339,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getNext()">
 <h3>getNext</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Node.html" title="class in cs1302.adt">Node</a></span>&nbsp;<span class="element-name">getNext</span>()</div>
-<div class="block">Returns the next node.</div>
+<div class="block">Returns the next node.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node second = new Node("b");
+Node first = new Node("a", second);
+System.out.println(first.getNext().getItem()); // "b"
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>the next in this node, if available; otherwise, <code>null</code></dd>
@@ -318,7 +359,17 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setNext(cs1302.adt.Node)">
 <h3>setNext</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNext</span><wbr><span class="parameters">(<a href="Node.html" title="class in cs1302.adt">Node</a>&nbsp;next)</span></div>
-<div class="block">Sets the next node.</div>
+<div class="block">Sets the next node.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node first = new Node("a");
+Node second = new Node("b");
+first.setNext(second);
+System.out.println(first.hasNext()); // true
+</pre>
+</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>next</code> - the next node</dd>
@@ -329,7 +380,18 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="hasNext()">
 <h3>hasNext</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasNext</span>()</div>
-<div class="block">Returns <code>true</code> when the next node is set.</div>
+<div class="block">Returns <code>true</code> when the next node is set.
+
+<p>
+Here is an example:
+<pre class="sourceContainer code java">
+Node first = new Node("a");
+System.out.println(first.hasNext()); // false
+
+first.setNext(new Node("b"));
+System.out.println(first.hasNext()); // true
+</pre>
+</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd><code>true</code> when <code>getNext() != null</code>; <code>false</code> otherwise</dd>
