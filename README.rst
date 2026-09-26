@@ -3,16 +3,16 @@
 .. |slug| replace:: cs1302-str-list
 .. |ttslug| replace:: ``cs1302-str-list``
 .. |course| replace:: CSCI 1302
-.. |semester| replace:: Spring 2026
-.. |version| replace:: v2026.sp
+.. |semester| replace:: Fall 2026
+.. |version| replace:: v2026.fa
 .. |server| replace:: Odin
 .. |discussion_board| replace:: Piazza
 
 .. notices (need to manually update the urls)
-.. |website| image:: https://img.shields.io/badge/cs1302uga.github.io-cs1302--c4--alpha-58becd
-   :alt: cs1302uga.github.io/cs1302-c4-alpha
-.. _website: https://cs1302uga.github.io/cs1302-c4-alpha/
-.. |approved_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202026-green
+.. |website| image:: https://img.shields.io/badge/cs1302uga.github.io-cs1302--str--list-58becd
+   :alt: cs1302uga.github.io/cs1302-str-list
+.. _website: https://cs1302uga.github.io/cs1302-str-list/
+.. |approved_notice| image:: https://img.shields.io/badge/Approved%20for-Fall%202026-green
    :alt: Approved for: |version|
 .. |not_approved_notice| image:: https://img.shields.io/badge/In%20development-Not%20yet%20approved-red
    :alt: In development - Not yet approved
@@ -22,7 +22,7 @@
 
 .. #|approved_notice|
 
-|approved_notice| |website|_
+|not_approved_notice| |website|_
 
 This document contains the description for the |title| project assigned to the students in the
 |semester| |course| classes at the University of Georgia. **Students who are assigned this project

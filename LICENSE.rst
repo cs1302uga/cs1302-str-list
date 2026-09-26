@@ -14,7 +14,7 @@ a |license_full|_ to `students and the public <#students-and-the-public>`_.
 Students and the Public
 =======================
 
-The **cs1302-c4-alpha** project is licensed under a |license_full|_ to students and
+The **cs1302-str-list** project is licensed under a |license_full|_ to students and
 the public.
 
 Here is a human-readable summary of (and not a substitute for) the |license|_.
