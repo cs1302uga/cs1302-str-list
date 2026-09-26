@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cs1302-str-list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+      main {
+          max-width: 46em!important;
+      }
+      footer {
+          max-width: 62em!important;
+      }
+      .bi {
+          display: inline-block;
+          vertical-align: -0.125em;
+          fill: currentcolor;
+      }
+      .bg-term {
+          background-color: #002833!important;
+          color: #93a1a1;
+      }
+      .hl-kw {
+          color: #859900;
+          font-weight: bold;
+      }
+      .hl-str {
+          color: #2aa198;
+      }
+      .hl-null {
+          color: #db312f;
+      }
+      .hl-ptr {
+          color: #268ad1;
+      }
+      .hl-idx {
+          color: #657b83;
+      }
+      #str-list-example {
+          font-size: 0.72rem;
+          overflow-x: auto;
+      }
+      @media (min-width: 576px) {
+          #str-list-example { font-size: calc(var(--bs-body-font-size) * 0.82); }
+      }
+      @media (min-width: 768px) {
+          #str-list-example { font-size: calc(var(--bs-body-font-size) * 0.98); }
+      }
+      @media (min-width: 992px) {
+          #str-list-example { font-size: calc(var(--bs-body-font-size) * 1.1); }
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100 text-center text-bg-dark py-3 py-md-5">
+    <main class="container d-flex flex-column gap-1 px-3 m-auto">
+      <div class="d-flex justify-content-center mx-0 mx-sm-3">
+        <pre id="str-list-example" class="font-monospace w-auto text-start bg-term mb-5 p-3 rounded shadow" style="line-height: normal;" aria-label="Visual depiction of ArrayStringList and LinkedStringList data structures.">
+<span class="hl-kw">ArrayStringList</span> (size = 3, capacity = 4)
+┌───────────┬───────────┬─────────────┬──────────┐
+│ <span class="hl-str">"alpha"</span>   │ <span class="hl-str">"bravo"</span>   │ <span class="hl-str">"charlie"</span>   │ <span class="hl-null">null</span>     │
+└───────────┴───────────┴─────────────┴──────────┘
+     <span class="hl-idx">[0]         [1]          [2]          [3]</span>
+
+<span class="hl-kw">LinkedStringList</span> (size = 3)
+head <span class="hl-ptr">──►</span> ┌─────────┬───┐   ┌─────────┬───┐   ┌───────────┬───┐
+         │ <span class="hl-str">"alpha"</span> │ <span class="hl-ptr">•─┼──►</span>│ <span class="hl-str">"bravo"</span> │ <span class="hl-ptr">•─┼──►</span>│ <span class="hl-str">"charlie"</span> │ <span class="hl-null">∅</span> │
+         └─────────┴───┘   └─────────┴───┘   └───────────┴───┘</pre>
+      </div>
+      <h1>cs1302-str-list</h1>
+      <p class="lead">This project is designed to help you explore the implementation of list abstract data types using arrays and linked nodes in CSCI 1302.</p>
+      <p class="d-grid d-grid gap-3 d-sm-flex mt-3 mt-sm-1 justify-content-center">
+        <a href="https://cs1302book.com/projects/cs1302-str-list/cs1302-str-list-index.html" class="btn btn-primary">Instructions</a>
+        <a href="doc" class="btn btn-secondary"><span class="font-monospace">cs1302-str-list.jar</span> API</a>
+      </p>
+    </main>
+    <footer class="container d-block px-3 py-5 py-sm-3 mt-auto text-muted small">
+      <div id="license-icons" class="license-icons d-flex flex-row justify-content-center py-3">
+        <a class="d-flex gap-2" rel="license" href="https://github.com/cs1302uga/cs1302-str-list/blob/main/LICENSE.rst" alt="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license" title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license" data-bs-toggle="tooltip">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" width="32" height="32" fill="currentColor" viewBox="0 0 64 64" title="Creative Commons license">
+            <use xlink:href="img/cc.svg#cc"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" width="32" height="32" fill="currentColor" viewBox="0 0 64 64" title="Creative Commons license Attribution terms">
+            <use xlink:href="img/by.svg#by"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" width="32" height="32" fill="currentColor" viewBox="0 0 64 64" title="Creative Commons license NonCommercial terms">
+            <use xlink:href="img/nc.svg#nc"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi" width="32" height="32" fill="currentColor" viewBox="0 0 64 64" title="Creative Commons license NoDerivatives terms">
+            <use xlink:href="img/nd.svg#nd"/>
+          </svg>
+        </a>
+      </div>
+      <aside class="copyright d-inline">
+        Copyright © Michael E. Cotterell, Bradley J. Barnes, and the
+        <span class="text-nowrap">University of Georgia</span>.
+      </aside>
+      <aside class="license d-inline" xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
+        Except where otherwise <a href="https://github.com/cs1302uga/cs1302-str-list/blob/main/LICENSE.rst#instructors">noted</a>,
+        this project is licensed under a
+        <a id="cc-by-nc-nd" rel="license" href="https://github.com/cs1302uga/cs1302-str-list/blob/main/LICENSE.rst" class="d-inline text-wrap">Creative Commons
+          Attribution-NonCommercial-NoDerivatives
+          4.0 International license</a>.
+      </aside>
+      <aside class="disclaimer d-inline">
+        The content and opinions expressed on this Web page do not necessarily reflect the views
+        of nor are they endorsed by the <span class="text-nowrap">University of Georgia</span> or
+        the <span class="text-nowrap">University System of Georgia</span>.
+      </aside>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      (function() {
+        Array
+          .from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+          .map(elem => new bootstrap.Tooltip(elem));
+      })();
+    </script>
+  </body>
+</html>
