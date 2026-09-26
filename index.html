@@ -17,56 +17,10 @@
           vertical-align: -0.125em;
           fill: currentcolor;
       }
-      .bg-term {
-          background-color: #002833!important;
-          color: #93a1a1;
-      }
-      .hl-kw {
-          color: #859900;
-          font-weight: bold;
-      }
-      .hl-str {
-          color: #2aa198;
-      }
-      .hl-null {
-          color: #db312f;
-      }
-      .hl-ptr {
-          color: #268ad1;
-      }
-      .hl-idx {
-          color: #657b83;
-      }
-      #str-list-example {
-          font-size: 0.72rem;
-          overflow-x: auto;
-      }
-      @media (min-width: 576px) {
-          #str-list-example { font-size: calc(var(--bs-body-font-size) * 0.82); }
-      }
-      @media (min-width: 768px) {
-          #str-list-example { font-size: calc(var(--bs-body-font-size) * 0.98); }
-      }
-      @media (min-width: 992px) {
-          #str-list-example { font-size: calc(var(--bs-body-font-size) * 1.1); }
-      }
     </style>
   </head>
   <body class="d-flex flex-column h-100 text-center text-bg-dark py-3 py-md-5">
     <main class="container d-flex flex-column gap-1 px-3 m-auto">
-      <div class="d-flex justify-content-center mx-0 mx-sm-3">
-        <pre id="str-list-example" class="font-monospace w-auto text-start bg-term mb-5 p-3 rounded shadow" style="line-height: normal;" aria-label="Visual depiction of ArrayStringList and LinkedStringList data structures.">
-<span class="hl-kw">ArrayStringList</span> (size = 3, capacity = 4)
-┌───────────┬───────────┬─────────────┬──────────┐
-│ <span class="hl-str">"alpha"</span>   │ <span class="hl-str">"bravo"</span>   │ <span class="hl-str">"charlie"</span>   │ <span class="hl-null">null</span>     │
-└───────────┴───────────┴─────────────┴──────────┘
-     <span class="hl-idx">[0]         [1]          [2]          [3]</span>
-
-<span class="hl-kw">LinkedStringList</span> (size = 3)
-head <span class="hl-ptr">──►</span> ┌─────────┬───┐   ┌─────────┬───┐   ┌───────────┬───┐
-         │ <span class="hl-str">"alpha"</span> │ <span class="hl-ptr">•─┼──►</span>│ <span class="hl-str">"bravo"</span> │ <span class="hl-ptr">•─┼──►</span>│ <span class="hl-str">"charlie"</span> │ <span class="hl-null">∅</span> │
-         └─────────┴───┘   └─────────┴───┘   └───────────┴───┘</pre>
-      </div>
       <h1>cs1302-str-list</h1>
       <p class="lead">This project is designed to help you explore the implementation of list abstract data types using arrays and linked nodes in CSCI 1302.</p>
       <p class="d-grid d-grid gap-3 d-sm-flex mt-3 mt-sm-1 justify-content-center">
